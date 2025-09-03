@@ -1,0 +1,3140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Marry Mother Of Mercy - Free Bootstrap 4 Template by JUP TECHNOLOGY</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- FontAwesome for modern icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Preload critical slider images for faster loading -->
+    <link rel="preload" as="image" href="images/IMG_0736.JPG">
+    <link rel="preload" as="image" href="images/IMG_0849.JPG">
+    <link rel="preload" as="image" href="images/IMG_1109.JPG">
+    <link rel="preload" as="image" href="images/IMG_0954.JPG">
+    
+    <!-- Custom CSS for Image Quality Enhancement & Color Scheme -->
+    <style>
+      /* Color Variables */
+      :root {
+        --primary-blue: rgb(44, 172, 238);
+        --primary-maroon: maroon;
+        --white: white;
+        --black: black;
+        --light-blue: rgba(44, 172, 238, 0.1);
+        --light-maroon: rgba(128, 0, 0, 0.1);
+      }
+      
+      /* Enhanced slider images with performance optimizations */
+      .home-slider .slider-item {
+        background-size: cover !important;
+        background-position: center 20% !important;
+        background-repeat: no-repeat !important;
+        min-height: 600px;
+        position: relative;
+        /* Performance optimizations */
+        will-change: transform;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        /* Faster loading with background attachment */
+        background-attachment: scroll;
+      }
+      
+      /* Slider images are now applied via inline styles for reliability */
+      /* This ensures the exact order: IMG_0736.JPG → IMG_0849.JPG → IMG_1109.JPG → IMG_0954.JPG */
+      
+      /* Improved image sharpness and quality with loading optimization */
+      .slider-item {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        /* Faster loading optimizations */
+        contain: layout style paint;
+        content-visibility: auto;
+        /* Smooth transitions */
+        transition: opacity 0.3s ease-in-out;
+      }
+      
+      /* Loading state for slider */
+      .home-slider .owl-item:not(.active) .slider-item {
+        opacity: 0.7;
+      }
+      
+      .home-slider .owl-item.active .slider-item {
+        opacity: 1;
+      }
+      
+      /* Enhanced overlay for better text readability with performance */
+      .slider-item .overlay {
+        background: linear-gradient(45deg, rgba(0,0,0,0.5), rgba(128,0,0,0.3));
+        /* Remove backdrop-filter for better performance */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        /* Performance optimization */
+        will-change: opacity;
+        transform: translateZ(0);
+      }
+      
+      /* Main Color Scheme Updates */
+      .bg-primary {
+        background-color: var(--primary-blue) !important;
+      }
+      
+      .bg-secondary {
+        background-color: var(--primary-maroon) !important;
+      }
+      
+      .bg-tertiary {
+        background-color: var(--primary-maroon) !important;
+      }
+      
+      .bg-fifth {
+        background-color: var(--black) !important;
+      }
+      
+      .text-primary {
+        color: var(--primary-blue) !important;
+      }
+      
+      .btn-primary {
+        background: var(--primary-blue) !important;
+        border-color: var(--primary-blue) !important;
+        color: var(--white) !important;
+      }
+      
+      .btn-primary:hover {
+        background: var(--primary-maroon) !important;
+        border-color: var(--primary-maroon) !important;
+        color: var(--white) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(128,0,0,0.4);
+      }
+      
+      /* Better text contrast and shadows */
+      .slider-text {
+        position: relative;
+        z-index: 2;
+      }
+      
+      .slider-text h1 {
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #ffffff !important;
+      }
+      
+      /* Navigation and Header Colors */
+      .navbar-dark,
+      .bg-dark,
+      #ftco-navbar {
+        background-color: var(--white) !important;
+        background: var(--white) !important;
+        border-bottom: 1px solid #e9ecef;
+      }
+      
+      .navbar-nav .nav-link {
+        color: var(--black) !important;
+      }
+      
+      .navbar-nav .nav-link:hover {
+        color: var(--primary-blue) !important;
+      }
+      
+      .navbar-nav .nav-item.active .nav-link {
+        color: var(--primary-blue) !important;
+        font-weight: bold;
+      }
+      
+      /* Override any Bootstrap default colors */
+      .navbar-dark .navbar-nav .nav-link {
+        color: var(--black) !important;
+      }
+      
+      .navbar-dark .navbar-nav .nav-link:hover,
+      .navbar-dark .navbar-nav .nav-link:focus {
+        color: var(--primary-blue) !important;
+      }
+      
+      .navbar-dark .navbar-nav .active > .nav-link,
+      .navbar-dark .navbar-nav .nav-link.active {
+        color: var(--primary-blue) !important;
+        font-weight: bold;
+      }
+      
+      /* Navbar toggler for mobile */
+      .navbar-toggler {
+        border-color: var(--black) !important;
+      }
+      
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+      }
+      
+      /* Enhanced service section images */
+      .services .icon {
+        background: linear-gradient(135deg, rgba(44,172,238,0.2), rgba(44,172,238,0.1));
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(44,172,238,0.3);
+        box-shadow: 0 8px 32px rgba(44,172,238,0.2);
+      }
+      
+      .services h3 {
+        color: var(--white) !important;
+      }
+      
+      .services p {
+        color: rgba(255,255,255,0.9) !important;
+      }
+      
+      /* Mission, Vision, Objectives sections with different backgrounds and gradients */
+      .ftco-services .services.bg-primary {
+        background: linear-gradient(135deg, var(--primary-blue), rgba(44,172,238,0.8)) !important;
+      }
+      
+      .ftco-services .services.bg-tertiary {
+        background: linear-gradient(135deg, var(--primary-maroon), rgba(128,0,0,0.8)) !important;
+      }
+      
+      .ftco-services .services.bg-fifth {
+        background: linear-gradient(135deg, var(--primary-blue), rgba(44,172,238,0.8)) !important;
+      }
+      
+      /* Enhanced course section styling */
+      .course {
+        background: var(--white);
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        border: 1px solid #f8f9fa;
+        margin-bottom: 30px;
+      }
+      
+      .course:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(44,172,238,0.2);
+        border-color: var(--primary-blue);
+      }
+      
+      .course .img {
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        transition: all 0.3s ease;
+        height: 250px;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .course:hover .img {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+      }
+      
+      /* Course content styling */
+      .course .text {
+        padding: 25px;
+        background: var(--white);
+      }
+      
+      .course .text h3 {
+        margin-bottom: 15px;
+      }
+      
+      .course .text h3 a {
+        color: var(--primary-blue) !important;
+        font-weight: 700;
+        font-size: 1.4rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      
+      .course:hover .text h3 a {
+        color: var(--primary-maroon) !important;
+      }
+      
+      .course .text .subheading {
+        color: var(--primary-maroon) !important;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        padding: 8px 15px;
+        background: rgba(128,0,0,0.1);
+        border-radius: 20px;
+        display: inline-block;
+      }
+      
+      .course .text .subheading span {
+        color: var(--primary-maroon) !important;
+        font-weight: 700;
+      }
+      
+      .course .text p {
+        color: #495057 !important;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 0;
+      }
+      
+      /* Course section heading styling */
+      .ftco-section .heading-section h2 {
+        color: #2c3e50 !important;
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+      
+      .ftco-section .heading-section h2 span {
+        color: var(--primary-blue) !important;
+        position: relative;
+      }
+      
+      .ftco-section .heading-section h2 span::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-maroon));
+        border-radius: 2px;
+      }
+      
+      .ftco-section .heading-section p {
+        color: #6c757d !important;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      /* Enhanced counter/statistics section styling */
+      .ftco-counter {
+        position: relative;
+        padding: 80px 0;
+      }
+      
+      .ftco-counter .overlay {
+        background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(44,172,238,0.3)) !important;
+      }
+      
+      /* Counter section heading */
+      .heading-section-black h2 {
+        color: var(--white) !important;
+        font-weight: 700;
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        text-shadow: none;
+      }
+      
+      .heading-section-black h2 span {
+        color: var(--primary-blue) !important;
+        position: relative;
+        text-shadow: none;
+      }
+      
+      .heading-section-black h2 span::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--white));
+        border-radius: 2px;
+      }
+      
+      .heading-section-black p {
+        color: rgba(255,255,255,0.95) !important;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto;
+        text-shadow: none;
+        font-weight: 400;
+      }
+      
+      /* Counter cards styling */
+      .counter-wrap {
+        margin-bottom: 30px;
+      }
+      
+      .block-18 {
+        background: rgba(255,255,255,0.95);
+        border-radius: 15px;
+        padding: 30px 20px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        backdrop-filter: blur(10px);
+      }
+      
+      .block-18:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(44,172,238,0.3);
+        border-color: var(--primary-blue);
+        background: rgba(255,255,255,1);
+      }
+      
+      .block-18 .icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px auto;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(44,172,238,0.3);
+        padding: 8px;
+        overflow: hidden;
+      }
+      
+      .block-18:hover .icon {
+        transform: scale(1.1);
+        box-shadow: 0 8px 25px rgba(44,172,238,0.5);
+      }
+      
+      .block-18 .icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid var(--white);
+      }
+      
+      .block-18 .icon span {
+        color: var(--white) !important;
+        font-size: 1.8rem;
+        display: none;
+      }
+      
+      .block-18 .text .number {
+        color: var(--primary-blue) !important;
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 10px;
+        display: block;
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .block-18 .text span {
+        color: #2c3e50 !important;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 1.4;
+      }
+      
+      /* Enhanced testimonials section styling */
+      .testimony-section {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef) !important;
+        padding: 80px 0;
+      }
+      
+      /* Testimonials section heading */
+      .testimony-section .heading-section h2 {
+        color: #2c3e50 !important;
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+      
+      .testimony-section .heading-section h2 span {
+        color: var(--primary-blue) !important;
+        position: relative;
+      }
+      
+      .testimony-section .heading-section h2 span::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-maroon));
+        border-radius: 2px;
+      }
+      
+      .testimony-section .heading-section p {
+        color: #6c757d !important;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      /* Testimonial cards styling */
+      .testimony-wrap {
+        background: var(--white);
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        border: 1px solid #f8f9fa;
+        margin: 15px;
+      }
+      
+      .testimony-wrap:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(44,172,238,0.2);
+        border-color: var(--primary-blue);
+      }
+      
+      /* User image styling */
+      .testimony-wrap .user-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 3px solid var(--primary-blue);
+        background-size: cover !important;
+        background-position: center !important;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+      }
+      
+      .testimony-wrap:hover .user-img {
+        border-color: var(--primary-maroon);
+        transform: scale(1.05);
+      }
+      
+      /* Testimonial text content */
+      .testimony-wrap .text {
+        background: var(--white) !important;
+        padding: 25px;
+        border-radius: 0 15px 15px 0;
+        position: relative;
+      }
+      
+      .testimony-wrap .text .quote {
+        position: absolute;
+        top: -10px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(44,172,238,0.3);
+      }
+      
+      .testimony-wrap .text .quote i {
+        color: var(--white) !important;
+        font-size: 1.2rem;
+      }
+      
+      .testimony-wrap .text p {
+        color: #495057 !important;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        font-style: italic;
+      }
+      
+      .testimony-wrap .text .name {
+        color: var(--primary-blue) !important;
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+      }
+      
+      .testimony-wrap .text .position {
+        color: var(--primary-maroon) !important;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      
+      /* Carousel navigation styling */
+      .owl-nav {
+        margin-top: 30px;
+        text-align: center;
+      }
+      
+      .owl-nav button {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon)) !important;
+        color: var(--white) !important;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin: 0 10px;
+        transition: all 0.3s ease;
+        font-size: 1.2rem;
+      }
+      
+      .owl-nav button:hover {
+        background: linear-gradient(135deg, var(--primary-maroon), var(--black)) !important;
+        transform: scale(1.1);
+        box-shadow: 0 5px 15px rgba(44,172,238,0.4);
+      }
+      
+      /* Carousel dots styling */
+      .owl-dots {
+        text-align: center;
+        margin-top: 20px;
+      }
+      
+      .owl-dots .owl-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #dee2e6;
+        margin: 0 5px;
+        transition: all 0.3s ease;
+      }
+      
+      .owl-dots .owl-dot.active,
+      .owl-dots .owl-dot:hover {
+        background: var(--primary-blue);
+        transform: scale(1.2);
+      }
+      
+      /* Enhanced teacher images and styling */
+      .staff {
+        background: var(--white);
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        border: 1px solid #f8f9fa;
+      }
+      
+      .staff:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(44,172,238,0.2);
+        border-color: var(--primary-blue);
+      }
+      
+      .staff .img {
+        background-size: cover !important;
+        background-position: center top !important;
+        background-repeat: no-repeat !important;
+        transition: all 0.3s ease;
+        border-radius: 15px 15px 0 0;
+        overflow: hidden;
+        height: 280px;
+      }
+      
+      .staff:hover .img {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+      }
+      
+      /* Teacher section heading */
+      .heading-section h2 {
+        color: #2c3e50 !important;
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+      
+      .heading-section h2 span {
+        color: var(--primary-blue) !important;
+        position: relative;
+      }
+      
+      .heading-section h2 span::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-maroon));
+        border-radius: 2px;
+      }
+      
+      .heading-section p {
+        color: #6c757d !important;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      /* Teacher card text styling */
+      .staff .text {
+        padding: 25px 20px;
+        background: var(--white);
+      }
+      
+      .staff .text h3 {
+        color: var(--primary-blue) !important;
+        font-weight: 700;
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+        transition: color 0.3s ease;
+      }
+      
+      .staff:hover .text h3 {
+        color: var(--primary-maroon) !important;
+      }
+      
+      .staff .text .position {
+        color: var(--primary-maroon) !important;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        display: block;
+      }
+      
+      .staff .text .faded p {
+        color: #495057 !important;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        font-style: italic;
+      }
+      
+      /* Social media icons */
+      .ftco-social {
+        margin-top: 15px;
+      }
+      
+      .ftco-social li {
+        margin: 0 5px;
+      }
+      
+      .ftco-social li a {
+        width: 35px;
+        height: 35px;
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon));
+        color: var(--white) !important;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+      }
+      
+      .ftco-social li a:hover {
+        background: linear-gradient(135deg, var(--primary-maroon), var(--black));
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(44,172,238,0.4);
+      }
+      
+      /* Enhanced gallery section styling */
+      .ftco-gallery {
+        background: linear-gradient(135deg, #f8f9fa, #ffffff);
+        padding: 80px 0 60px 0;
+      }
+      
+      /* Gallery section heading */
+      .ftco-gallery .heading-section h2 {
+        color: #2c3e50 !important;
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+      
+      .ftco-gallery .heading-section h2 span {
+        color: var(--primary-blue) !important;
+        position: relative;
+      }
+      
+      .ftco-gallery .heading-section h2 span::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-maroon));
+        border-radius: 2px;
+      }
+      
+      .ftco-gallery .heading-section p {
+        color: #6c757d !important;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      /* Gallery items styling */
+      .gallery.img {
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        transition: all 0.3s ease;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0;
+      }
+      
+      .gallery.img:hover {
+        transform: scale(1.05);
+      }
+      
+      /* Gallery overlay styling */
+      .gallery-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(44,172,238,0.8), rgba(128,0,0,0.6));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(2px);
+      }
+      
+      .gallery.img:hover .gallery-overlay {
+        opacity: 1;
+      }
+      
+      /* Gallery icon styling */
+      .gallery-overlay .icon {
+        width: 60px;
+        height: 60px;
+        background: rgba(255,255,255,0.2);
+        border: 2px solid var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+      
+      .gallery-overlay:hover .icon {
+        transform: scale(1.1);
+        background: rgba(255,255,255,0.3);
+      }
+      
+      .gallery-overlay .icon span {
+        color: var(--white) !important;
+        font-size: 1.5rem;
+      }
+      
+      /* Gallery text styling */
+      .gallery-text {
+        text-align: center;
+        color: var(--white);
+      }
+      
+      .gallery-text h4 {
+        color: var(--white) !important;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      }
+      
+      .gallery-text p {
+        color: rgba(255,255,255,0.9) !important;
+        font-size: 0.9rem;
+        margin-bottom: 0;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      }
+      
+      /* Gallery grid styling */
+      .ftco-gallery .col-md-3 {
+        padding: 0;
+        border: 2px solid var(--white);
+        transition: all 0.3s ease;
+      }
+      
+      .ftco-gallery .col-md-3:hover {
+        border-color: var(--primary-blue);
+        z-index: 10;
+        position: relative;
+      }
+      
+      /* Overall image quality improvements */
+      img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+      
+      /* Smooth animations */
+      * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      /* Enhanced background sections */
+      .ftco-intro, .ftco-counter {
+        background-attachment: fixed !important;
+        background-size: cover !important;
+        background-position: center center !important;
+      }
+      
+      /* Better mobile responsiveness for images */
+      @media (max-width: 768px) {
+        .home-slider .slider-item {
+          min-height: 400px;
+          background-attachment: scroll !important;
+          background-position: center 30% !important;
+        }
+        
+        .ftco-intro, .ftco-counter {
+          background-attachment: scroll !important;
+        }
+        
+        /* Optimize for mobile performance */
+        .home-slider .slider-item:nth-child(n+3) {
+          display: none;
+        }
+      }
+      
+      /* Optimize slider for faster loading */
+      .home-slider {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+      
+      .home-slider.loaded {
+        opacity: 1;
+      }
+      
+      /* Lazy loading optimization - removed to show images immediately */
+      
+      /* Additional responsive breakpoints for better image display */
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .home-slider .slider-item {
+          min-height: 550px;
+          background-position: center 25% !important;
+        }
+      }
+      
+      @media (min-width: 1025px) {
+        .home-slider .slider-item {
+          min-height: 650px;
+          background-position: center 15% !important;
+        }
+      }
+      
+      /* Critical loading optimization */
+      .home-slider .owl-stage-outer {
+        overflow: hidden;
+      }
+      
+      .home-slider .owl-item {
+        will-change: transform;
+      }
+      
+      /* Reduce layout shifts */
+      .home-slider .slider-text {
+        min-height: 100px;
+      }
+      
+      /* WHY CHOOSE US Section Styling */
+      .why-choose-us-content {
+        position: relative;
+      }
+      
+      .experience-highlight {
+        border-left: 4px solid var(--primary-blue);
+        padding: 25px;
+        background: linear-gradient(135deg, var(--light-blue), rgba(44,172,238,0.05));
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(44,172,238,0.1);
+        margin-bottom: 25px;
+      }
+      
+      .experience-number .display-4 {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 4rem;
+        line-height: 1;
+        font-weight: 800;
+      }
+      
+      .experience-text h4 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 5px;
+      }
+      
+      .experience-text p {
+        font-size: 1rem;
+        color: #6c757d;
+        font-style: italic;
+      }
+      
+      .school-description .lead {
+        font-size: 1.15rem;
+        line-height: 1.7;
+        color: #495057;
+        text-align: justify;
+        margin-bottom: 25px;
+        font-weight: 400;
+      }
+      
+      .founding-info {
+        border: 1px solid #e9ecef;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      
+      .founding-info:hover {
+        box-shadow: 0 8px 25px rgba(44,172,238,0.15);
+        transform: translateY(-3px);
+        border-color: var(--primary-blue);
+      }
+      
+      .icon-wrapper {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, rgba(44,172,238,0.15), rgba(44,172,238,0.05));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border: 2px solid rgba(44,172,238,0.2);
+      }
+      
+      .founding-info h5 {
+        color: var(--primary-blue);
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+      
+      .founding-info p {
+        color: #495057;
+        line-height: 1.6;
+        margin-bottom: 0;
+      }
+      
+      /* Links and Accents */
+      a {
+        color: var(--primary-blue);
+      }
+      
+      a:hover {
+        color: var(--primary-maroon);
+      }
+      
+      /* Mobile responsiveness for WHY CHOOSE US, ABOUT US, and TEACHERS */
+      @media (max-width: 768px) {
+        .experience-number .display-4 {
+          font-size: 3rem;
+        }
+        
+        .experience-highlight {
+          text-align: center;
+          padding: 20px;
+        }
+        
+        .founding-info .d-flex {
+          flex-direction: column;
+          text-align: center;
+        }
+        
+        .icon-wrapper {
+          margin: 0 auto 15px auto;
+        }
+        
+        .school-title h4 {
+          font-size: 1.2rem;
+          text-align: center;
+        }
+        
+        .founding-story,
+        .school-development,
+        .facilities-info {
+          padding: 15px;
+          margin-bottom: 20px;
+        }
+        
+        .discover-more {
+          padding: 20px;
+        }
+        
+        .wrap-about {
+          padding: 30px 0 !important;
+        }
+        
+        /* Teachers section mobile */
+        .heading-section h2,
+        .ftco-section .heading-section h2 {
+          font-size: 2rem;
+        }
+        
+        .staff {
+          margin-bottom: 30px;
+        }
+        
+        .staff .img {
+          height: 250px;
+        }
+        
+        .staff .text {
+          padding: 20px 15px;
+        }
+        
+        /* Courses section mobile */
+        .course {
+          margin-bottom: 25px;
+        }
+        
+        .course .img {
+          height: 200px;
+        }
+        
+        .course .text {
+          padding: 20px;
+        }
+        
+        .course .text h3 a {
+          font-size: 1.2rem;
+        }
+        
+        /* Counter section mobile */
+        .heading-section-black h2 {
+          font-size: 2.2rem;
+        }
+        
+        .block-18 {
+          padding: 25px 15px;
+          margin-bottom: 20px;
+        }
+        
+        .block-18 .icon {
+          width: 60px;
+          height: 60px;
+          margin-bottom: 15px;
+          padding: 6px;
+        }
+        
+        .block-18 .icon img {
+          border: 1px solid var(--white);
+        }
+        
+        .block-18 .icon span {
+          font-size: 1.5rem;
+        }
+        
+        .block-18 .text .number {
+          font-size: 2.5rem;
+        }
+        
+        .block-18 .text span {
+          font-size: 0.9rem;
+        }
+        
+        /* Testimonials section mobile */
+        .testimony-section .heading-section h2 {
+          font-size: 2rem;
+        }
+        
+        .testimony-wrap {
+          margin: 10px;
+          flex-direction: column;
+        }
+        
+        .testimony-wrap .user-img {
+          width: 70px;
+          height: 70px;
+          margin: 0 auto 15px auto;
+        }
+        
+        .testimony-wrap .text {
+          padding: 20px;
+          border-radius: 15px;
+        }
+        
+        .testimony-wrap .text .quote {
+          top: -15px;
+          right: 15px;
+          width: 35px;
+          height: 35px;
+        }
+        
+        .testimony-wrap .text .quote i {
+          font-size: 1rem;
+        }
+        
+        .owl-nav button {
+          width: 45px;
+          height: 45px;
+          font-size: 1rem;
+        }
+        
+        /* Gallery section mobile */
+        .ftco-gallery .heading-section h2 {
+          font-size: 2rem;
+        }
+        
+        .gallery.img {
+          height: 250px;
+        }
+        
+        .gallery-overlay .icon {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 15px;
+        }
+        
+        .gallery-overlay .icon span {
+          font-size: 1.2rem;
+        }
+        
+        .gallery-text h4 {
+          font-size: 1rem;
+        }
+        
+        .gallery-text p {
+          font-size: 0.8rem;
+        }
+      }
+      
+      /* ABOUT US Section Styling */
+      .wrap-about {
+        padding: 40px 0 !important;
+      }
+      
+      .school-title {
+        margin-bottom: 30px;
+      }
+      
+      .school-title h4 {
+        font-size: 1.4rem;
+        line-height: 1.4;
+        border-bottom: 3px solid var(--primary-blue);
+        padding-bottom: 12px;
+        display: inline-block;
+        font-weight: 700;
+        color: var(--primary-blue);
+      }
+      
+      .founding-story,
+      .school-development,
+      .facilities-info {
+        position: relative;
+        padding: 20px;
+        margin-bottom: 25px;
+        background: rgba(248,249,250,0.8);
+        border-radius: 10px;
+        border-left: 4px solid var(--primary-blue);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+      }
+      
+      .founding-story:hover,
+      .school-development:hover,
+      .facilities-info:hover {
+        transform: translateX(5px);
+        box-shadow: 0 4px 20px rgba(44,172,238,0.1);
+        background: rgba(44,172,238,0.02);
+      }
+      
+      .founding-story p,
+      .school-development p,
+      .facilities-info p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #495057;
+        margin-bottom: 15px;
+      }
+      
+      .founding-story strong,
+      .school-development strong,
+      .facilities-info strong {
+        color: var(--primary-blue);
+        font-weight: 700;
+      }
+      
+      .discover-more {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon));
+        border-radius: 12px;
+        padding: 25px;
+        text-align: center;
+        box-shadow: 0 6px 20px rgba(44,172,238,0.3);
+        transition: all 0.3s ease;
+      }
+      
+      .discover-more:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(44,172,238,0.4);
+      }
+      
+      .discover-more h5 {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        color: var(--white) !important;
+        font-weight: 700;
+      }
+      
+      .discover-more .btn {
+        background: var(--white) !important;
+        color: var(--primary-blue) !important;
+        border: none;
+        font-weight: 600;
+        padding: 12px 30px;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+      }
+      
+      .discover-more .btn:hover {
+        background: rgba(255,255,255,0.9) !important;
+        transform: scale(1.05);
+      }
+      
+
+      
+      /* Admission Modal Styling */
+      .modal-lg {
+        max-width: 900px;
+      }
+      
+      .admission-form label {
+        font-weight: 600;
+        color: #495057;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+      }
+      
+      .admission-form .form-control {
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        transition: border-color 0.15s ease-in-out;
+      }
+      
+      .admission-form .form-control:focus {
+        border-color: var(--primary-blue);
+        box-shadow: 0 0 0 0.2rem rgba(44,172,238,0.25);
+      }
+      
+      .school-info {
+        border-bottom: 2px solid var(--primary-blue);
+        padding-bottom: 15px;
+      }
+      
+      .school-info p {
+        margin-bottom: 5px;
+        font-size: 0.95rem;
+      }
+      
+      .signature-box {
+        border: 2px dashed #ced4da !important;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f8f9fa;
+      }
+      
+      .official-use-section {
+        border: 2px solid #6c757d;
+        margin-top: 20px;
+      }
+      
+      .official-use-section h6 {
+        background: #6c757d;
+        color: white;
+        margin: -15px -15px 15px -15px;
+        padding: 10px;
+        border-radius: 6px 6px 0 0;
+      }
+      
+      .modal-header {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon)) !important;
+      }
+      
+      .modal-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+      
+      .modal-footer .btn {
+        margin-left: 10px;
+      }
+      
+      /* Print styles */
+      @media print {
+        .modal-header,
+        .modal-footer {
+          display: none !important;
+        }
+        
+        .modal-body {
+          padding: 0 !important;
+        }
+        
+        .admission-form {
+          font-size: 12px;
+        }
+        
+        .admission-form .form-control {
+          border: none;
+          border-bottom: 1px solid #000;
+          border-radius: 0;
+          background: transparent;
+          padding: 2px 0;
+        }
+      }
+      
+      /* Mobile responsiveness for modal */
+      @media (max-width: 768px) {
+        .modal-lg {
+          max-width: 95%;
+          margin: 10px auto;
+        }
+        
+        .admission-form .row {
+          margin-bottom: 15px;
+        }
+        
+        .admission-form label {
+          font-size: 0.85rem;
+        }
+        
+        .school-info p {
+          font-size: 0.8rem;
+        }
+      }
+      
+      /* Fix for large logo in modal */
+      .form-logo {
+        width: 80px !important;
+        height: 80px !important;
+        border-radius: 10px !important;
+        border: 2px solid var(--primary-blue) !important;
+        object-fit: cover !important;
+        box-shadow: 0 2px 10px rgba(44,172,238,0.3) !important;
+      }
+      
+      /* Fix for modal header logo */
+      .modal-logo {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 50% !important;
+        border: 2px solid rgba(255,255,255,0.3) !important;
+        object-fit: cover !important;
+      }
+      
+      .school-header-info {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef) !important;
+        border-radius: 10px !important;
+        padding: 20px !important;
+        border: 1px solid #dee2e6 !important;
+      }
+      
+      .school-name {
+        color: var(--primary-blue) !important;
+        font-weight: 700 !important;
+        font-size: 1.2rem !important;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1) !important;
+      }
+      
+      .contact-info p {
+        font-size: 0.85rem !important;
+        color: #495057 !important;
+        margin-bottom: 6px !important;
+      }
+      
+      .contact-info i {
+        width: 18px !important;
+        font-size: 0.9rem !important;
+      }
+      
+      .form-divider {
+        border: none !important;
+        height: 2px !important;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-maroon), var(--primary-blue)) !important;
+        margin: 15px 0 !important;
+      }
+      
+      .application-title h4 {
+        font-size: 1.3rem !important;
+        letter-spacing: 1px !important;
+        margin-bottom: 10px !important;
+        color: var(--primary-blue) !important;
+      }
+      
+      .title-underline {
+        width: 80px !important;
+        height: 3px !important;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-maroon)) !important;
+        margin: 0 auto !important;
+        border-radius: 2px !important;
+      }
+      
+      /* Google Map Section Styling - Optimized */
+      .map-container {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border: 3px solid var(--primary-blue);
+        position: relative;
+        /* Performance optimizations */
+        will-change: transform;
+        transform: translateZ(0);
+      }
+      
+      .map-container iframe {
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        /* Optimize iframe performance */
+        contain: layout style paint;
+        transform: translateZ(0);
+      }
+      
+      .map-container:hover {
+        box-shadow: 0 15px 40px rgba(44,172,238,0.3);
+        transform: translateY(-2px) translateZ(0);
+      }
+      
+      /* Map loading placeholder styling */
+      .map-loading-placeholder {
+        will-change: opacity;
+        transform: translateZ(0);
+      }
+      
+      /* Optimize map loading animation */
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      .contact-info-item {
+        transition: all 0.3s ease;
+        border: 1px solid #e9ecef;
+        height: 100%;
+      }
+      
+      .contact-info-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(44,172,238,0.2);
+        border-color: var(--primary-blue);
+      }
+      
+      .contact-info-item .icon {
+        background: linear-gradient(135deg, var(--light-blue), rgba(44,172,238,0.05));
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+      }
+      
+      .contact-info-item h5 {
+        color: var(--primary-blue) !important;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      
+      /* Footer Styling */
+      .ftco-footer {
+        background-color: var(--black) !important;
+      }
+      
+      .ftco-footer h2 {
+        color: var(--white) !important;
+      }
+      
+      .ftco-footer .text {
+        color: rgba(255,255,255,0.8) !important;
+      }
+      
+      .ftco-footer a {
+        color: rgba(255,255,255,0.8) !important;
+      }
+      
+      .ftco-footer a:hover {
+        color: var(--primary-blue) !important;
+      }
+      
+      .contact-info-item p {
+        color: #6c757d;
+        line-height: 1.6;
+      }
+      
+      /* Mobile responsiveness for map */
+      @media (max-width: 768px) {
+        .map-container iframe {
+          height: 300px;
+        }
+        
+        .contact-info-item {
+          margin-bottom: 20px;
+        }
+      }
+      
+      /* Curriculum Call-to-Action Styling */
+      .curriculum-cta {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon)) !important;
+        border-radius: 15px !important;
+        box-shadow: 0 10px 30px rgba(44,172,238,0.3);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .curriculum-cta::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+        transform: rotate(45deg);
+        transition: all 0.6s ease;
+        opacity: 0;
+      }
+      
+      .curriculum-cta:hover::before {
+        opacity: 1;
+        animation: shine 1.5s ease-in-out;
+      }
+      
+      .curriculum-cta:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(44,172,238,0.4);
+      }
+      
+      .curriculum-cta h4 {
+        color: var(--white) !important;
+        font-weight: 700;
+        font-size: 1.8rem;
+      }
+      
+      .curriculum-cta p {
+        color: rgba(255,255,255,0.9) !important;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      
+      .curriculum-cta .btn-light {
+        background: var(--white) !important;
+        color: var(--primary-blue) !important;
+        border: none;
+        font-weight: 600;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      }
+      
+      .curriculum-cta .btn-light:hover {
+        background: rgba(255,255,255,0.9) !important;
+        color: var(--primary-maroon) !important;
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      }
+      
+      @keyframes shine {
+        0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+        100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+      }
+      
+      /* Mobile responsiveness for curriculum CTA */
+      @media (max-width: 768px) {
+        .curriculum-cta {
+          padding: 30px 20px !important;
+        }
+        
+        .curriculum-cta h4 {
+          font-size: 1.5rem;
+        }
+        
+        .curriculum-cta p {
+          font-size: 1rem;
+        }
+        
+        .curriculum-cta .btn-light {
+          padding: 12px 30px;
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+	  <div class="py-2 bg-primary">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+	    		<div class="col-lg-12 d-block">
+		    		<div class="row d-flex">
+			    		<div class="col-md-5 pr-4 d-flex topper align-items-center">
+			    			<div class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
+						    <span class="text">MAJOHE, RELINI MJI MPYA, DAR ES SALAAM, TANZANIA</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">motherofmercyprimaryschool@gmail.com</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">0787886959 & 0784168758</span>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center">
+	    	<a class="navbar-brand" href="index.html"><img src="images/marry.jpeg" alt="Marry Mother Of Mercy Logo" style="height: 80px; width: auto;"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item active"><a href="index.html" class="nav-link pl-0">Home</a></li>
+	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	        	<li class="nav-item"><a href="teacher.html" class="nav-link">Teacher</a></li>
+	        	<li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
+
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <!-- Loading spinner for slider -->
+    <div id="slider-loading" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.9); z-index: 9999; display: flex; align-items: center; justify-content: center;">
+      <div style="text-align: center;">
+        <div style="width: 50px; height: 50px; border: 4px solid #f3f3f3; border-top: 4px solid #2cacee; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px;"></div>
+        <p style="color: #2cacee; font-weight: 600;">Loading...</p>
+      </div>
+    </div>
+    
+    <style>
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+    
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image: url(images/IMG_0736.JPG); background-size: cover; background-position: center 20%; background-repeat: no-repeat;">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-8 text-center ftco-animate">
+            <h1 class="mb-4">Kids Are The Best <span>Explorers In The World</span></h1>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url(images/IMG_0849.JPG); background-size: cover; background-position: center 20%; background-repeat: no-repeat;">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-8 text-center ftco-animate">
+            <h1 class="mb-4">Perfect Learning<span> For Your Child</span></h1>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url(images/IMG_1109.JPG); background-size: cover; background-position: center 20%; background-repeat: no-repeat;">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-8 text-center ftco-animate">
+            <h1 class="mb-4">Excellence in <span>Education & Learning</span></h1>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url(images/IMG_0954.JPG); background-size: cover; background-position: center 20%; background-repeat: no-repeat;">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-8 text-center ftco-animate">
+            <h1 class="mb-4">Building Tomorrow's <span>Leaders Today</span></h1>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-services ftco-no-pb">
+			<div class="container-wrap">
+				<div class="row no-gutters">
+          <div class="col-md-4 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-primary">
+            <div class="media block-6 d-block text-center">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-education"></span>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">SCHOOL MISSION</h3>
+                <p>To uplift and integrate pupils into a bright future providing quality education, discipline, and moral values.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-4 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-tertiary">
+            <div class="media block-6 d-block text-center">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-kids"></span>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">SCHOOL VISION</h3>
+                <p>To build a society based on positive cultural, moral and spiritual values for a peaceful and prosperous world.</p>
+              </div>
+            </div>    
+          </div>
+          <div class="col-md-4 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-fifth">
+            <div class="media block-6 d-block text-center">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-diploma"></span>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">OBJECTIVES</h3>
+                <p>To provide quality education and develop pupils' intellectual, physical and spiritual capabilities while fostering moral values and responsible citizenship.</p>
+              </div>
+            </div>      
+          </div>
+
+        </div>
+			</div>
+		</section>
+		
+		<section class="ftco-section ftco-no-pt ftc-no-pb">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 order-md-last wrap-about py-5 wrap-about bg-light">
+						<div class="text px-4 ftco-animate">
+	          	<h2 class="mb-4">ABOUT US</h2>
+							<div class="school-title mb-4">
+								<h4 class="text-primary font-weight-bold">MARY MOTHER OF MERCY PRE & PRIMARY SCHOOL</h4>
+							</div>
+							
+							<div class="founding-story mb-4">
+								<p class="mb-3">The school started at the level of the Pre-Primary in <strong>2011</strong> administered by the <strong>Sisters of the Holy Spirit</strong>.</p>
+							</div>
+							
+							<div class="school-development mb-4">
+								<p class="mb-3">The school was conducive to carry out the Pre-Primary school activities most effectively, admitting children from <strong>3 years to 5 years</strong> in the three levels – Baby, Pre-primary I, Pre-primary 2 classes.</p>
+								
+								<p class="mb-3">The school developed to a primary school level in the year <strong>2014</strong> and in <strong>2015</strong> a new school campus for primary school pupils was constructed within the church premises.</p>
+							</div>
+							
+							<div class="facilities-info mb-4">
+								<p class="mb-3">Both Pre-primary and Primary School campuses have modern and malt complex structures with modern class rooms, decent administration offices, resting and first aid rooms.</p>
+								
+								<p class="mb-4">The Primary School is equipped with a <strong>computer lab</strong>, <strong>library</strong> and a <strong>conference room</strong>.</p>
+							</div>
+							
+							<div class="discover-more">
+								<h5 class="text-primary font-weight-bold mb-3">DISCOVER MORE</h5>
+								<p><a href="about.html" class="btn btn-primary px-4 py-3">Learn About Us</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
+          	<h2 class="mb-4">WHY CHOOSE US</h2>
+						<div class="why-choose-us-content">
+							<div class="experience-highlight mb-4">
+								<div class="d-flex align-items-center mb-3">
+									<div class="experience-number mr-3">
+										<span class="display-4 font-weight-bold text-primary">14+</span>
+									</div>
+									<div class="experience-text">
+										<h4 class="mb-0 text-dark font-weight-bold">Years of Experience</h4>
+										<p class="mb-0 text-muted">in education programme</p>
+									</div>
+								</div>
+							</div>
+							
+							<div class="school-description">
+								<p class="lead mb-4">Mary Mother of Mercy Pre & primary school is an undertaking of the Mary Mother of Mercy Catholic Parish Mji Mpya Relini under the registered trustees of the Arch Diocese of Dar es Salaam.</p>
+								
+								<div class="founding-info bg-light p-4 rounded">
+									<div class="d-flex align-items-start">
+										<div class="icon-wrapper mr-3">
+											<i class="flaticon-education text-primary" style="font-size: 2rem;"></i>
+										</div>
+										<div>
+											<h5 class="text-dark mb-2">Our Foundation</h5>
+											<p class="mb-0">The school started at the level of the Pre-Primary in <strong>2011</strong> administered by the <strong>Sisters of the Holy Spirit</strong>.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="ftco-intro" style="background-image: url(images/IMG_1088.JPG);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9">
+						<h2>ARE YOU READY TO JOIN US?</h2>
+						<p class="mb-0">Contact us for Admission</p>
+					</div>
+					<div class="col-md-3 d-flex align-items-center">
+						<p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3" data-toggle="modal" data-target="#admissionModal">Get Application Form</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Admission Application Modal -->
+		<div class="modal fade" id="admissionModal" tabindex="-1" role="dialog" aria-labelledby="admissionModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header bg-primary text-white">
+						<div class="d-flex align-items-center">
+							<img src="images/marry.jpeg" alt="School Logo" class="modal-logo mr-3">
+							<div>
+								<h5 class="modal-title mb-0" id="admissionModalLabel">MARY MOTHER OF MERCY</h5>
+								<small class="text-light">PRE & PRIMARY SCHOOL</small>
+							</div>
+						</div>
+						<button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="school-header-info mb-4">
+							<div class="row align-items-center">
+								<div class="col-md-3 text-center">
+									<img src="images/marry.jpeg" alt="School Logo" class="form-logo mb-2">
+								</div>
+								<div class="col-md-9">
+									<div class="school-details">
+										<h4 class="school-name mb-2">MARY MOTHER OF MERCY PRE & PRIMARY SCHOOL</h4>
+										<div class="contact-info">
+											<p class="mb-1"><i class="icon-map-marker text-primary mr-2"></i><strong>MJIMPYA RELINI, P. O. BOX 12986, DAR ES SALAAM</strong></p>
+											<p class="mb-1"><i class="icon-phone text-primary mr-2"></i><strong>Mob. 0784168758</strong></p>
+											<p class="mb-1"><i class="icon-envelope text-primary mr-2"></i><strong>motherofmercyprimaryschool@gmail.com</strong></p>
+											<p class="mb-0"><i class="icon-certificate text-primary mr-2"></i><strong>DS.01/7/EA1.127 & DS.01/7/127</strong></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<hr class="form-divider">
+						</div>
+						
+						<div class="application-title mb-4">
+							<h4 class="text-center text-primary font-weight-bold">APPLICATION FORM</h4>
+							<div class="title-underline"></div>
+						</div>
+						
+						<form class="admission-form" id="admissionForm">
+							<div class="row mb-3">
+								<div class="col-md-6">
+									<label>Application No:</label>
+									<input type="text" class="form-control" placeholder="Will be generated automatically" readonly>
+								</div>
+								<div class="col-md-6">
+									<label>Class to be joined: <span class="text-danger">*</span></label>
+									<select class="form-control" name="class_to_join" required>
+										<option value="">Select Class</option>
+										<option value="Baby Class">Baby Class</option>
+										<option value="Pre-Primary I">Pre-Primary I</option>
+										<option value="Pre-Primary II">Pre-Primary II</option>
+										<option value="Standard I">Standard I</option>
+										<option value="Standard II">Standard II</option>
+										<option value="Standard III">Standard III</option>
+										<option value="Standard IV">Standard IV</option>
+										<option value="Standard V">Standard V</option>
+										<option value="Standard VI">Standard VI</option>
+										<option value="Standard VII">Standard VII</option>
+									</select>
+								</div>
+							</div>
+							
+							<h5 class="text-primary mb-3">A. Student's Information (Jina Kamili Kwa herufi kubwa)</h5>
+							
+							<div class="row mb-3">
+								<div class="col-md-4">
+									<label>1. Name: <span class="text-danger">*</span></label>
+									<input type="text" class="form-control" name="student_name" placeholder="First Name" required>
+								</div>
+								<div class="col-md-4">
+									<label>Middle name:</label>
+									<input type="text" class="form-control" name="student_middle_name" placeholder="Middle Name">
+								</div>
+								<div class="col-md-4">
+									<label>Surname: <span class="text-danger">*</span></label>
+									<input type="text" class="form-control" name="student_surname" placeholder="Surname" required>
+								</div>
+							</div>
+							
+							<div class="row mb-3">
+								<div class="col-md-3">
+									<label>Sex:</label>
+									<select class="form-control" name="sex">
+										<option value="">Select</option>
+										<option value="male">Male</option>
+										<option value="female">Female</option>
+									</select>
+								</div>
+								<div class="col-md-4">
+									<label>Date of Birth:</label>
+									<input type="date" class="form-control" name="date_of_birth">
+								</div>
+								<div class="col-md-5">
+									<label>Place of Birth:</label>
+									<input type="text" class="form-control" name="place_of_birth" placeholder="Place of Birth">
+								</div>
+							</div>
+							
+							<div class="row mb-3">
+								<div class="col-md-6">
+									<label>2. Nationality:</label>
+									<input type="text" class="form-control" name="nationality" placeholder="Nationality">
+								</div>
+								<div class="col-md-6">
+									<label>Tribe:</label>
+									<input type="text" class="form-control" name="tribe" placeholder="Tribe">
+								</div>
+							</div>
+							
+							<div class="row mb-3">
+								<div class="col-md-6">
+									<label>3. Religion:</label>
+									<input type="text" class="form-control" name="religion" placeholder="Religion">
+								</div>
+								<div class="col-md-6">
+									<label>Denomination:</label>
+									<input type="text" class="form-control" name="denomination" placeholder="Denomination">
+								</div>
+							</div>
+							
+							<div class="row mb-4">
+								<div class="col-md-8">
+									<label>4. Name of the school attended before:</label>
+									<input type="text" class="form-control" name="previous_school" placeholder="Previous School Name">
+								</div>
+								<div class="col-md-4">
+									<label>Class:</label>
+									<input type="text" class="form-control" name="previous_class" placeholder="Previous Class">
+								</div>
+							</div>
+							
+							<h5 class="text-primary mb-3">B. Parent's Information</h5>
+							
+							<div class="row mb-3">
+								<div class="col-md-4">
+									<label>a. Father:</label>
+									<input type="text" class="form-control" name="father_name" placeholder="Father's Name">
+								</div>
+								<div class="col-md-4">
+									<label>Occupation:</label>
+									<input type="text" class="form-control" name="father_occupation" placeholder="Father's Occupation">
+								</div>
+								<div class="col-md-4">
+									<label>Phone No:</label>
+									<input type="tel" class="form-control" name="father_phone" placeholder="Father's Phone">
+								</div>
+							</div>
+							
+							<div class="row mb-3">
+								<div class="col-md-12">
+									<label>Place of work:</label>
+									<input type="text" class="form-control" name="father_workplace" placeholder="Father's Place of Work">
+								</div>
+							</div>
+							
+							<div class="row mb-3">
+								<div class="col-md-4">
+									<label>b. Mother:</label>
+									<input type="text" class="form-control" name="mother_name" placeholder="Mother's Name">
+								</div>
+								<div class="col-md-4">
+									<label>Occupation:</label>
+									<input type="text" class="form-control" name="mother_occupation" placeholder="Mother's Occupation">
+								</div>
+								<div class="col-md-4">
+									<label>Phone No:</label>
+									<input type="tel" class="form-control" name="mother_phone" placeholder="Mother's Phone">
+								</div>
+							</div>
+							
+							<div class="row mb-3">
+								<div class="col-md-12">
+									<label>Place of work:</label>
+									<input type="text" class="form-control" name="mother_workplace" placeholder="Mother's Place of Work">
+								</div>
+							</div>
+							
+							<div class="row mb-3">
+								<div class="col-md-4">
+									<label>c. Guardian:</label>
+									<input type="text" class="form-control" name="guardian_name" placeholder="Guardian's Name">
+								</div>
+								<div class="col-md-4">
+									<label>Occupation:</label>
+									<input type="text" class="form-control" name="guardian_occupation" placeholder="Guardian's Occupation">
+								</div>
+								<div class="col-md-4">
+									<label>Phone No:</label>
+									<input type="tel" class="form-control" name="guardian_phone" placeholder="Guardian's Phone">
+								</div>
+							</div>
+							
+							<div class="row mb-3">
+								<div class="col-md-12">
+									<label>Place of work:</label>
+									<input type="text" class="form-control" name="guardian_workplace" placeholder="Guardian's Place of Work">
+								</div>
+							</div>
+							
+							<h5 class="text-primary mb-3">C. Postal Addresses</h5>
+							
+							<div class="row mb-4">
+								<div class="col-md-6">
+									<label>Box No:</label>
+									<input type="text" class="form-control" name="postal_box" placeholder="P.O. Box Number">
+								</div>
+								<div class="col-md-6">
+									<label>Place:</label>
+									<input type="text" class="form-control" name="postal_place" placeholder="Place/City">
+								</div>
+							</div>
+							
+							<div class="row mb-4">
+								<div class="col-md-12">
+									<label>Signature of the parent/guardian:</label>
+									
+									<!-- Signature Tabs -->
+									<div class="signature-tabs mb-2">
+										<button type="button" class="btn btn-sm btn-outline-primary active" onclick="switchSignatureTab('draw')">Draw</button>
+										<button type="button" class="btn btn-sm btn-outline-primary" onclick="switchSignatureTab('upload')">Upload</button>
+										<button type="button" class="btn btn-sm btn-outline-primary" onclick="switchSignatureTab('type')">Type</button>
+									</div>
+									
+									<!-- Draw Signature -->
+									<div id="signature-draw" class="signature-method">
+										<canvas id="signatureCanvas" width="400" height="120" style="border: 2px dashed #ced4da; border-radius: 8px; background: white; cursor: crosshair; display: block; width: 100%; max-width: 400px;"></canvas>
+										<div class="mt-2">
+											<button type="button" class="btn btn-sm btn-secondary" onclick="clearSignature()">Clear</button>
+											<button type="button" class="btn btn-sm btn-primary" onclick="saveSignature()">Save</button>
+										</div>
+									</div>
+									
+									<!-- Upload Signature -->
+									<div id="signature-upload" class="signature-method" style="display: none;">
+										<div class="upload-area" style="border: 2px dashed #ced4da; border-radius: 8px; padding: 20px; text-align: center; background: white; cursor: pointer;" onclick="document.getElementById('signatureFile').click()">
+											<i class="icon-upload text-primary" style="font-size: 2rem;"></i>
+											<p class="mb-1">Click to upload signature image</p>
+											<small class="text-muted">JPG, PNG, GIF (Max 2MB)</small>
+										</div>
+										<input type="file" id="signatureFile" name="signature_file" accept="image/*" style="display: none;">
+										<div id="signaturePreview" class="mt-2"></div>
+									</div>
+									
+									<!-- Type Signature -->
+									<div id="signature-type" class="signature-method" style="display: none;">
+										<input type="text" class="form-control mb-2" id="typedSignature" name="typed_signature" placeholder="Type your full name">
+										<select class="form-control mb-2" id="signatureFont">
+											<option value="cursive">Cursive</option>
+											<option value="serif">Serif</option>
+											<option value="sans-serif">Sans-serif</option>
+										</select>
+										<div id="signatureTypePreview" style="padding: 15px; border: 1px solid #ddd; border-radius: 4px; background: white; font-size: 20px; text-align: center; min-height: 60px; display: flex; align-items: center; justify-content: center;">Your signature will appear here</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="official-use-section bg-light p-3 rounded">
+								<h6 class="text-center text-muted mb-3">FOR OFFICIAL USE ONLY</h6>
+								<div class="row">
+									<div class="col-md-6">
+										<p><strong>ADMITTED/NOT ADMITTED:</strong> _______________</p>
+									</div>
+									<div class="col-md-6">
+										<p><strong>Date:</strong> _______________</p>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<p><strong>Signature of Head Master/Mistress:</strong></p>
+										<div class="border" style="height: 50px;"></div>
+									</div>
+									<div class="col-md-6">
+										<p><strong>Signature of Academic Master/Mistress:</strong></p>
+										<div class="border" style="height: 50px;"></div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								<button type="submit" class="btn btn-primary" id="submitBtn">
+									<span class="spinner-border spinner-border-sm d-none" role="status"></span>
+									Submit Application
+								</button>
+								<button type="button" class="btn btn-info" onclick="window.print()">Print Form</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<section class="ftco-section ftco-no-pb">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <h2 class="mb-4"><span>Certified</span> Teachers</h2>
+            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+          </div>
+        </div>	
+				<div class="row">
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/IMG_0682.JPG);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Father</h3>
+								<span class="position mb-2">PARISHIONER</span>
+								<div class="faded">
+									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/SISTER%20LISY.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Sister Lisy</h3>
+								<span class="position mb-2">HEAD MISTRESS</span>
+								<div class="faded">
+									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/MADAM%20PAULINA.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Stella Smith</h3>
+								<span class="position mb-2">DIRECTOR</span>
+								<div class="faded">
+									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/Secretary.png);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Mrs</h3>
+								<span class="position mb-2">SECRETARY</span>
+								<div class="faded">
+									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <h2 class="mb-4"><span>Our</span> Curriculum</h2>
+            <p>We offer a comprehensive curriculum from Grade I to VII, following the Tanzanian National Education Standards. Our programs are designed to build strong foundations in core subjects while nurturing creativity and critical thinking skills.</p>
+          </div>
+        </div>	
+				<div class="row">
+					<div class="col-md-6 course d-lg-flex ftco-animate">
+						<div class="img" style="background-image: url(images/IMG_1098.JPG);"></div>
+						<div class="text bg-light p-4">
+							<h3><a href="courses.html">Grade I & II Foundation</a></h3>
+							<p class="subheading"><span>Age Group:</span> 6-8 Years</p>
+							<p>Building essential skills in <strong>Reading, Writing, Listening & Speaking, Arithmetic, Kiswahili, Culture & Arts, and Health & Environment</strong>. Our foundation program focuses on developing basic literacy and numeracy skills.</p>
+						</div>
+					</div>
+					<div class="col-md-6 course d-lg-flex ftco-animate">
+						<div class="img" style="background-image: url(images/IMG_1093.JPG);"></div>
+						<div class="text bg-light p-4">
+							<h3><a href="courses.html">Grade III & IV Intermediate</a></h3>
+							<p class="subheading"><span>Age Group:</span> 9-11 Years</p>
+							<p>Advancing to <strong>English, Kiswahili, Mathematics, Science, Geography & Environment, Historia ya Tanzania & Maadili, and Culture & Sports</strong>. Students develop stronger academic foundations and critical thinking.</p>
+						</div>
+					</div>
+					<div class="col-md-6 course d-lg-flex ftco-animate">
+						<div class="img" style="background-image: url(images/IMG_0612.JPG);"></div>
+						<div class="text bg-light p-4">
+							<h3><a href="courses.html">Grade V-VII Advanced</a></h3>
+							<p class="subheading"><span>Age Group:</span> 12-14 Years</p>
+							<p>Comprehensive studies in <strong>English, Kiswahili, Mathematics, Science, Social Studies, and Civic & Moral Education</strong>. Preparing students for secondary education with advanced academic skills and moral values.</p>
+						</div>
+					</div>
+					<div class="col-md-6 course d-lg-flex ftco-animate">
+						<div class="img" style="background-image: url(images/IMG_0928.JPG);"></div>
+						<div class="text bg-light p-4">
+							<h3><a href="courses.html">Extracurricular Activities</a></h3>
+							<p class="subheading"><span>Focus:</span> Holistic Development</p>
+							<p>Beyond academics, we offer <strong>Sports, Arts, Music, Drama, and Cultural Activities</strong>. Our programs develop leadership skills, teamwork, creativity, and physical fitness for well-rounded education.</p>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Call to Action -->
+				<div class="row mt-5">
+					<div class="col-md-12 text-center ftco-animate">
+						<div class="curriculum-cta bg-primary text-white p-4 rounded">
+							<h4 class="mb-3">📚 Explore Our Complete Curriculum</h4>
+							<p class="mb-4">Discover detailed information about our grade-specific subjects, teaching methodologies, and educational approach designed for academic excellence.</p>
+							<a href="courses.html" class="btn btn-light btn-lg px-5 py-3">
+								<i class="fas fa-graduation-cap mr-2"></i>View Full Curriculum
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_4.jpg);" data-stellar-background-ratio="0.5">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section heading-section-black ftco-animate">
+            <h2 class="mb-4"><span>13+ Years of</span> Excellence</h2>
+            <p>Since 2011, Mary Mother of Mercy Pre & Primary School has been dedicated to providing quality education, nurturing young minds, and building strong foundations for our students' bright futures.</p>
+          </div>
+        </div>	
+    		<div class="row d-md-flex align-items-center justify-content-center">
+    			<div class="col-lg-10">
+    				<div class="row d-md-flex align-items-center">
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><img src="images/marry.jpeg" alt="School Logo"></div>
+		              <div class="text">
+		                <strong class="number" data-number="18">0</strong>
+		                <span>Certified Teachers</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><img src="images/marry.jpeg" alt="School Logo"></div>
+		              <div class="text">
+		                <strong class="number" data-number="351">0</strong>
+		                <span>Successful Kids</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><img src="images/marry.jpeg" alt="School Logo"></div>
+		              <div class="text">
+		                <strong class="number" data-number="564">0</strong>
+		                <span>Happy Parents</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><img src="images/marry.jpeg" alt="School Logo"></div>
+		              <div class="text">
+		                <strong class="number" data-number="300">0</strong>
+		                <span>Awards Won</span>
+		              </div>
+		            </div>
+		          </div>
+	          </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section testimony-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <h2 class="mb-4"><span>What Parents</span> Says About Us</h2>
+            <p>Hear from our parent community about their experiences with Mary Mother of Mercy Pre & Primary School and how we've impacted their children's educational journey.</p>
+          </div>
+        </div>
+        <div class="row ftco-animate justify-content-center">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel">
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/SIR%20ANOLD.jpg)">
+                  </div>
+                  <div class="text ml-2 bg-light">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>Mary Mother of Mercy has been a blessing to our family. My daughter has grown tremendously in both academics and character. The teachers are dedicated and the Christian values taught here have shaped her into a respectful and confident child.</p>
+                    <p class="name">Mr. Arnold Mwalimu</p>
+                    <span class="position">Parent - Standard IV</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/SIR%20DAUD.jpg)">
+                  </div>
+                  <div class="text ml-2 bg-light">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>The quality of education at Mary Mother of Mercy is exceptional. My son started here in Pre-Primary and now he's in Standard III. His English and Swahili have improved remarkably, and the computer lab has given him early exposure to technology.</p>
+                    <p class="name">Mr. David Kimaro</p>
+                    <span class="position">Parent - Standard III</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/MADAM%20LUCIANA.jpg)">
+                  </div>
+                  <div class="text ml-2 bg-light">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>As a mother, I appreciate the holistic approach to education here. The Sisters of the Holy Spirit have created an environment where children learn not just academics but also moral values. My twins are thriving in Pre-Primary I and II.</p>
+                    <p class="name">Mrs. Grace Dietrick</p>
+                    <span class="position">Mother - Pre-Primary</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/SIR%20SARARA.jpg)">
+                  </div>
+                  <div class="text ml-2 bg-light">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>The school's commitment to excellence is evident in everything they do. The modern classrooms, well-equipped library, and dedicated teachers have helped my son excel academically. He's now confident in mathematics and science subjects.</p>
+                    <p class="name">Mr. Joseph Sarara</p>
+                    <span class="position">Parent - Standard V</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/SIR%20SIMON.jpg)">
+                  </div>
+                  <div class="text ml-2 bg-light">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>What impressed me most is the individual attention each child receives. The teachers know my daughter by name and understand her learning style. The school events and community activities have also helped her develop social skills and confidence.</p>
+                    <p class="name">Mr. Simon Mwanga</p>
+                    <span class="position">Parent - Standard II</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/SIR%20WILLIAM.jpg)">
+                  </div>
+                  <div class="text ml-2 bg-light">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>The spiritual foundation provided here is invaluable. My children have learned to pray, respect others, and show kindness. The school's Catholic values align perfectly with our family beliefs, and we've seen positive character development in both our children.</p>
+                    <p class="name">Mr. William Msigwa</p>
+                    <span class="position">Parent - Standard VI & Baby Class</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+		<section class="ftco-gallery ftco-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-2">
+					<div class="col-md-8 text-center heading-section ftco-animate">
+						<h2 class="mb-4"><span>School</span> Gallery</h2>
+						<p>Explore our vibrant school community through these memorable moments captured during various activities, events, and daily school life.</p>
+					</div>
+				</div>
+			</div>
+    	<div class="container-wrap">
+    		<div class="row no-gutters">
+					<div class="col-md-3 ftco-animate">
+						<a href="images/DSC_9392-scaled-1-1536x1025.jpeg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/DSC_9392-scaled-1-1536x1025.jpeg);">
+							<div class="gallery-overlay">
+								<div class="icon mb-4 d-flex align-items-center justify-content-center">
+	    						<span class="icon-instagram"></span>
+	    					</div>
+	    					<div class="gallery-text">
+	    						<h4>School Events</h4>
+	    						<p>Graduation event</p>
+	    					</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 ftco-animate">
+						<a href="images/IMG_1088.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/IMG_1088.JPG);">
+							<div class="gallery-overlay">
+								<div class="icon mb-4 d-flex align-items-center justify-content-center">
+	    						<span class="icon-instagram"></span>
+	    					</div>
+	    					<div class="gallery-text">
+	    						<h4>School Events</h4>
+	    						<p>Special Occasions</p>
+	    					</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 ftco-animate">
+						<a href="images/IMG_1186.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/IMG_1186.JPG);">
+							<div class="gallery-overlay">
+								<div class="icon mb-4 d-flex align-items-center justify-content-center">
+	    						<span class="icon-instagram"></span>
+	    					</div>
+	    					<div class="gallery-text">
+	    						<h4>Outdoor Fun</h4>
+	    						<p>Recreation Time</p>
+	    					</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 ftco-animate">
+						<a href="images/IMG_0938.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/IMG_0938.JPG);">
+							<div class="gallery-overlay">
+								<div class="icon mb-4 d-flex align-items-center justify-content-center">
+	    						<span class="icon-instagram"></span>
+	    					</div>
+	    					<div class="gallery-text">
+	    						<h4>Community</h4>
+	    						<p>Together We Learn</p>
+	    					</div>
+							</div>
+						</a>
+					</div>
+        </div>
+    	</div>
+    </section>
+
+		<!-- Google Map Section -->
+		<section class="ftco-section ftco-no-pt">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-2">
+					<div class="col-md-8 text-center heading-section ftco-animate">
+						<h2 class="mb-4"><span>Find Us</span> On The Map</h2>
+						<p>Visit our school located at Mjimpya Relini, Dar es Salaam. We are easily accessible and welcome you to our campus.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="map-container">
+							<iframe 
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.3!2d39.15831!3d-6.901727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c37868ca18727%3A0x4c938603875a256d!2sMary%20Mother%20of%20Mercy%20Pre%20%26%20Primary%20School!5e0!3m2!1sen!2stz!4v1703123456789"
+								width="100%" 
+								height="450" 
+								style="border:0;" 
+								allowfullscreen="" 
+								loading="lazy" 
+								referrerpolicy="no-referrer-when-downgrade">
+							</iframe>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-4">
+					<div class="col-md-4">
+						<div class="contact-info-item text-center p-4 bg-light rounded">
+							<div class="icon mb-3">
+								<span class="icon-map-marker" style="font-size: 2.5rem; color: #007bff;"></span>
+							</div>
+							<h5 class="text-primary">📍 Address</h5>
+							<p class="mb-0">MJIMPYA RELINI, P. O. BOX 12986<br>DAR ES SALAAM, TANZANIA</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="contact-info-item text-center p-4 bg-light rounded">
+							<div class="icon mb-3">
+								<span class="icon-phone" style="font-size: 2.5rem; color: #007bff;"></span>
+							</div>
+							<h5 class="text-primary">📞 Phone</h5>
+							<p class="mb-0">0784168758<br>0674120346</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="contact-info-item text-center p-4 bg-light rounded">
+							<div class="icon mb-3">
+								<span class="icon-envelope" style="font-size: 2.5rem; color: #007bff;"></span>
+							</div>
+							<h5 class="text-primary">📧 Email</h5>
+							<p class="mb-0">motherofmercyprimaryschool@gmail.com<br>marrymotherofmercy@gmail.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">MAJOHE, RELINI MJI MPYA, DAR ES SALAAM, TANZANIA</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">0787886959 & 0784168758</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">motherofmercyprimaryschool@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+              <h2 class="ftco-heading-2">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                <li><a href="about.html"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+                <li><a href="courses.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Courses</a></li>
+                <li><a href="teacher.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Teachers</a></li>
+                <li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Deparments</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Subscribe Us!</h2>
+              <form action="#" class="subscribe-form">
+                <div class="form-group">
+                  <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
+                  <input type="submit" value="Subscribe" class="form-control submit px-3">
+                </div>
+              </form>
+            </div>
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
+            	<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to JUP TECHNOLOGY can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Developed  <i class="icon-heart" aria-hidden="true"></i> by <a href="https://JUP TECHNOLOGY.com" target="_blank">JUP TECHNOLOGY</a>
+  <!-- Link back to JUP TECHNOLOGY can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <!-- Optimized map loading script -->
+  <script>
+    // Fast map loading with intersection observer
+    function initializeMapLoading() {
+      const mapContainer = document.getElementById('map-container');
+      const mapLoader = document.getElementById('map-loading');
+      const mapIframe = document.getElementById('school-map-iframe');
+      
+      if (!mapContainer || !mapLoader || !mapIframe) return;
+      
+      // Use Intersection Observer for lazy loading
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Load map when it comes into view
+            loadMapIframe();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: '100px' // Start loading 100px before it comes into view
+      });
+      
+      observer.observe(mapLoader);
+      
+      // Fallback: load after 2 seconds if not in view
+      setTimeout(() => {
+        if (mapLoader.style.display !== 'none') {
+          loadMapIframe();
+        }
+      }, 2000);
+    }
+    
+    function loadMapIframe() {
+      const mapIframe = document.getElementById('school-map-iframe');
+      if (mapIframe && !mapIframe.src) {
+        // Optimized embed URL with faster loading parameters
+        const mapSrc = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.3!2d39.15831!3d-6.901727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c37868ca18727%3A0x4c938603875a256d!2sMary%20Mother%20of%20Mercy%20Pre%20%26%20Primary%20School!5e0!3m2!1sen!2stz!4v' + Date.now();
+        mapIframe.src = mapSrc;
+      }
+    }
+    
+    function hideMapLoader() {
+      const mapLoader = document.getElementById('map-loading');
+      const mapContainer = document.getElementById('map-container');
+      
+      if (mapLoader && mapContainer) {
+        mapLoader.style.opacity = '0';
+        mapLoader.style.transition = 'opacity 0.3s ease';
+        
+        setTimeout(() => {
+          mapLoader.style.display = 'none';
+          mapContainer.style.display = 'block';
+          mapContainer.style.opacity = '0';
+          mapContainer.style.transition = 'opacity 0.5s ease';
+          
+          setTimeout(() => {
+            mapContainer.style.opacity = '1';
+          }, 50);
+        }, 300);
+      }
+    }
+    
+    // Initialize when DOM is ready
+    document.addEventListener('DOMContentLoaded', initializeMapLoading);
+  </script>
+  <script src="js/main-fixed.js"></script>
+  
+  <!-- Application Form JavaScript -->
+  <script>
+    // Signature Canvas Setup
+    let signatureCanvas = document.getElementById('signatureCanvas');
+    let signatureCtx = signatureCanvas ? signatureCanvas.getContext('2d') : null;
+    let isDrawing = false;
+    let signatureData = null;
+    
+    // Setup signature canvas when modal opens
+    $('#admissionModal').on('shown.bs.modal', function() {
+        signatureCanvas = document.getElementById('signatureCanvas');
+        if (signatureCanvas) {
+            signatureCtx = signatureCanvas.getContext('2d');
+            setupSignatureCanvas();
+        }
+    });
+    
+    function setupSignatureCanvas() {
+        if (!signatureCanvas || !signatureCtx) return;
+        
+        signatureCanvas.addEventListener('mousedown', startDrawing);
+        signatureCanvas.addEventListener('mousemove', draw);
+        signatureCanvas.addEventListener('mouseup', stopDrawing);
+        signatureCanvas.addEventListener('mouseout', stopDrawing);
+        
+        // Touch events for mobile
+        signatureCanvas.addEventListener('touchstart', handleTouch);
+        signatureCanvas.addEventListener('touchmove', handleTouch);
+        signatureCanvas.addEventListener('touchend', stopDrawing);
+        
+        function startDrawing(e) {
+            isDrawing = true;
+            draw(e);
+        }
+        
+        function draw(e) {
+            if (!isDrawing) return;
+            
+            const rect = signatureCanvas.getBoundingClientRect();
+            const x = (e.clientX || e.touches[0].clientX) - rect.left;
+            const y = (e.clientY || e.touches[0].clientY) - rect.top;
+            
+            signatureCtx.lineWidth = 2;
+            signatureCtx.lineCap = 'round';
+            signatureCtx.strokeStyle = '#000';
+            
+            signatureCtx.lineTo(x, y);
+            signatureCtx.stroke();
+            signatureCtx.beginPath();
+            signatureCtx.moveTo(x, y);
+        }
+        
+        function stopDrawing() {
+            if (isDrawing) {
+                isDrawing = false;
+                signatureCtx.beginPath();
+            }
+        }
+        
+        function handleTouch(e) {
+            e.preventDefault();
+            const touch = e.touches[0];
+            const mouseEvent = new MouseEvent(e.type === 'touchstart' ? 'mousedown' : 
+                                             e.type === 'touchmove' ? 'mousemove' : 'mouseup', {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            signatureCanvas.dispatchEvent(mouseEvent);
+        }
+    }
+    
+    // Signature tab switching
+    function switchSignatureTab(tabName) {
+        // Hide all signature methods
+        document.querySelectorAll('.signature-method').forEach(method => {
+            method.style.display = 'none';
+        });
+        
+        // Remove active class from all buttons
+        document.querySelectorAll('.signature-tabs .btn').forEach(btn => {
+            btn.classList.remove('active');
+            btn.classList.add('btn-outline-primary');
+            btn.classList.remove('btn-primary');
+        });
+        
+        // Show selected method
+        document.getElementById('signature-' + tabName).style.display = 'block';
+        
+        // Activate clicked button
+        event.target.classList.add('active');
+        event.target.classList.remove('btn-outline-primary');
+        event.target.classList.add('btn-primary');
+    }
+    
+    // Clear signature
+    function clearSignature() {
+        if (signatureCtx && signatureCanvas) {
+            signatureCtx.clearRect(0, 0, signatureCanvas.width, signatureCanvas.height);
+        }
+    }
+    
+    // Save signature
+    function saveSignature() {
+        if (signatureCanvas) {
+            signatureData = signatureCanvas.toDataURL();
+            alert('Signature saved successfully!');
+        }
+    }
+    
+    // File upload handling
+    document.addEventListener('DOMContentLoaded', function() {
+        const signatureFile = document.getElementById('signatureFile');
+        if (signatureFile) {
+            signatureFile.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    if (file.size > 2 * 1024 * 1024) {
+                        alert('File size must be less than 2MB');
+                        return;
+                    }
+                    
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const preview = document.getElementById('signaturePreview');
+                        preview.innerHTML = `
+                            <img src="${e.target.result}" style="max-width: 200px; max-height: 100px; border: 1px solid #ddd; border-radius: 4px;">
+                            <button type="button" class="btn btn-sm btn-danger ml-2" onclick="removeSignatureFile()">Remove</button>
+                        `;
+                        signatureData = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+        
+        // Typed signature preview
+        const typedSignature = document.getElementById('typedSignature');
+        const signatureFont = document.getElementById('signatureFont');
+        const signatureTypePreview = document.getElementById('signatureTypePreview');
+        
+        function updateTypedSignature() {
+            if (typedSignature && signatureFont && signatureTypePreview) {
+                const name = typedSignature.value;
+                const font = signatureFont.value;
+                
+                signatureTypePreview.style.fontFamily = font;
+                signatureTypePreview.textContent = name || 'Your signature will appear here';
+                signatureTypePreview.style.color = name ? '#000' : '#999';
+                
+                if (name) {
+                    signatureData = name;
+                }
+            }
+        }
+        
+        if (typedSignature) typedSignature.addEventListener('input', updateTypedSignature);
+        if (signatureFont) signatureFont.addEventListener('change', updateTypedSignature);
+    });
+    
+    function removeSignatureFile() {
+        document.getElementById('signatureFile').value = '';
+        document.getElementById('signaturePreview').innerHTML = '';
+        signatureData = null;
+    }
+    
+    // Form submission
+    document.getElementById('admissionForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const submitBtn = document.getElementById('submitBtn');
+        const spinner = submitBtn.querySelector('.spinner-border');
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        spinner.classList.remove('d-none');
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status"></span> Submitting...';
+        
+        // Get form data
+        const formData = new FormData(this);
+        
+        // Add signature data if available
+        if (signatureData) {
+            formData.append('signature_data', signatureData);
+        }
+        
+        // Submit form
+        fetch('process_application.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Application submitted successfully!\nYour application number is: ' + data.application_no);
+                this.reset();
+                clearSignature();
+                signatureData = null;
+                $('#admissionModal').modal('hide');
+            } else {
+                alert('Error: ' + data.message);
+            }
+        })
+        .catch(error => {
+            alert('An error occurred. Please try again.');
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            spinner.classList.add('d-none');
+            submitBtn.innerHTML = 'Submit Application';
+        });
+    });
+  </script>
+  
+  <!-- Slider optimization script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Preload images for faster loading (images are now inline)
+        const images = [
+            'images/IMG_0736.JPG', // Slide 1: Kids Are The Best Explorers
+            'images/IMG_0849.JPG', // Slide 2: Perfect Learning For Your Child
+            'images/IMG_1109.JPG', // Slide 3: Excellence in Education & Learning
+            'images/IMG_0954.JPG'  // Slide 4: Building Tomorrow's Leaders
+        ];
+        
+        let loadedImages = 0;
+        const totalImages = images.length;
+        
+        // Function to hide loading spinner
+        function hideLoader() {
+            const loader = document.getElementById('slider-loading');
+            if (loader) {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 300);
+            }
+        }
+        
+        // Preload images
+        images.forEach(src => {
+            const img = new Image();
+            img.onload = function() {
+                loadedImages++;
+                if (loadedImages === totalImages) {
+                    // All images loaded, initialize slider
+                    setTimeout(() => {
+                        hideLoader();
+                        initializeSlider();
+                    }, 500);
+                }
+            };
+            img.onerror = function() {
+                loadedImages++;
+                if (loadedImages === totalImages) {
+                    hideLoader();
+                    initializeSlider();
+                }
+            };
+            img.src = src;
+        });
+        
+        // Fallback: hide loader after 3 seconds regardless
+        setTimeout(() => {
+            if (document.getElementById('slider-loading').style.display !== 'none') {
+                hideLoader();
+                initializeSlider();
+            }
+        }, 3000);
+        
+        function initializeSlider() {
+            // Add loaded class to slider items (images are now inline)
+            const sliderItems = document.querySelectorAll('.home-slider .slider-item');
+            sliderItems.forEach((item, index) => {
+                item.classList.add('loaded');
+                // Add data attribute for debugging
+                item.setAttribute('data-slide-index', index + 1);
+                console.log(`Slide ${index + 1} background:`, item.style.backgroundImage);
+            });
+            
+            // Add loaded class to slider
+            document.querySelector('.home-slider').classList.add('loaded');
+            
+            // Log slider initialization for debugging
+            console.log('Slider initialized with inline background images');
+            
+            // Optimize owl carousel settings
+            $('.home-slider').owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                smartSpeed: 800,
+                nav: false,
+                dots: true,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+                lazyLoad: true,
+                mouseDrag: true,
+                touchDrag: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        autoplayTimeout: 4000
+                    },
+                    768: {
+                        items: 1,
+                        autoplayTimeout: 5000
+                    }
+                }
+            });
+        }
+    });
+  </script>
+    
+  </body>
+</html>
