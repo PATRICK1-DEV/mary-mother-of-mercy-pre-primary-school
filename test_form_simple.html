@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #495057;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+        }
+        .required {
+            color: #dc3545;
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        .alert {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .alert-danger {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #007bff;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>🎓 Test Application Form</h1>
+        
+        <div id="alertContainer"></div>
+        
+        <form id="testApplicationForm">
+            <div class="form-group">
+                <label for="class_to_join">Class to Join <span class="required">*</span></label>
+                <select id="class_to_join" name="class_to_join" required>
+                    <option value="">Select Class</option>
+                    <option value="Baby Class">Baby Class</option>
+                    <option value="Pre-Primary I">Pre-Primary I</option>
+                    <option value="Pre-Primary II">Pre-Primary II</option>
+                    <option value="Standard I">Standard I</option>
+                    <option value="Standard II">Standard II</option>
+                    <option value="Standard III">Standard III</option>
+                    <option value="Standard IV">Standard IV</option>
+                    <option value="Standard V">Standard V</option>
+                    <option value="Standard VI">Standard VI</option>
+                    <option value="Standard VII">Standard VII</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="student_name">Student First Name <span class="required">*</span></label>
+                <input type="text" id="student_name" name="student_name" required placeholder="Enter student's first name">
+            </div>
+            
+            <div class="form-group">
+                <label for="student_middle_name">Student Middle Name</label>
+                <input type="text" id="student_middle_name" name="student_middle_name" placeholder="Enter student's middle name">
+            </div>
+            
+            <div class="form-group">
+                <label for="student_surname">Student Surname <span class="required">*</span></label>
+                <input type="text" id="student_surname" name="student_surname" required placeholder="Enter student's surname">
+            </div>
+            
+            <div class="form-group">
+                <label for="sex">Sex</label>
+                <select id="sex" name="sex">
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="date_of_birth">Date of Birth</label>
+                <input type="date" id="date_of_birth" name="date_of_birth">
+            </div>
+            
+            <div class="form-group">
+                <label for="father_name">Father's Name</label>
+                <input type="text" id="father_name" name="father_name" placeholder="Enter father's full name">
+            </div>
+            
+            <div class="form-group">
+                <label for="father_phone">Father's Phone</label>
+                <input type="tel" id="father_phone" name="father_phone" placeholder="Enter father's phone number">
+            </div>
+            
+            <div class="form-group">
+                <label for="mother_name">Mother's Name</label>
+                <input type="text" id="mother_name" name="mother_name" placeholder="Enter mother's full name">
+            </div>
+            
+            <div class="form-group">
+                <label for="mother_phone">Mother's Phone</label>
+                <input type="tel" id="mother_phone" name="mother_phone" placeholder="Enter mother's phone number">
+            </div>
+            
+            <div class="loading" id="loadingIndicator">
+                <div class="spinner"></div>
+                <p>Submitting application...</p>
+            </div>
+            
+            <button type="submit" class="btn" id="submitBtn">Submit Application</button>
+        </form>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #e9ecef; border-radius: 5px;">
+            <h3>🔍 Troubleshooting</h3>
+            <p>If the form doesn't work:</p>
+            <ol>
+                <li>Check browser console (F12 → Console) for errors</li>
+                <li>Make sure XAMPP Apache and MySQL are running</li>
+                <li>Run <a href="fix_application_complete.php">fix_application_complete.php</a> first</li>
+                <li>Check if <a href="process_application.php">process_application.php</a> loads without errors</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('testApplicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const alertContainer = document.getElementById('alertContainer');
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            loadingIndicator.style.display = 'block';
+            alertContainer.innerHTML = '';
+            
+            // Get form data
+            const formData = new FormData(this);
+            
+            // Submit form
+            fetch('process_application.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                console.log('Response status:', response.status);
+                console.log('Response headers:', response.headers);
+                return response.text();
+            })
+            .then(text => {
+                console.log('Raw response:', text);
+                
+                try {
+                    const data = JSON.parse(text);
+                    console.log('Parsed response:', data);
+                    
+                    if (data.success) {
+                        alertContainer.innerHTML = `
+                            <div class="alert alert-success">
+                                <h4>✅ Success!</h4>
+                                <p><strong>Application submitted successfully!</strong></p>
+                                <p><strong>Application Number:</strong> ${data.application_no}</p>
+                                <p><strong>Student:</strong> ${data.student_name}</p>
+                                <p><strong>Class:</strong> ${data.class}</p>
+                                <p><strong>Time:</strong> ${data.timestamp}</p>
+                            </div>
+                        `;
+                        this.reset();
+                    } else {
+                        alertContainer.innerHTML = `
+                            <div class="alert alert-danger">
+                                <h4>❌ Error</h4>
+                                <p><strong>Message:</strong> ${data.message}</p>
+                                <p><strong>Error Code:</strong> ${data.error_code || 'Unknown'}</p>
+                                <p><strong>Time:</strong> ${data.timestamp}</p>
+                            </div>
+                        `;
+                    }
+                } catch (parseError) {
+                    console.error('JSON parse error:', parseError);
+                    alertContainer.innerHTML = `
+                        <div class="alert alert-danger">
+                            <h4>❌ Response Error</h4>
+                            <p><strong>Could not parse server response.</strong></p>
+                            <p><strong>Raw response:</strong> ${text.substring(0, 500)}...</p>
+                            <p>Check browser console for details.</p>
+                        </div>
+                    `;
+                }
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+                alertContainer.innerHTML = `
+                    <div class="alert alert-danger">
+                        <h4>❌ Network Error</h4>
+                        <p><strong>Could not connect to server.</strong></p>
+                        <p><strong>Error:</strong> ${error.message}</p>
+                        <p>Make sure XAMPP is running and try again.</p>
+                    </div>
+                `;
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Application';
+                loadingIndicator.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #007bff;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #495057;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        .alert {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .alert-danger {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .alert-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .debug-info {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Simple Form Test</h1>
+        <p>This form will help identify why you're getting "An error occurred. Please try again."</p>
+        
+        <form id="testForm">
+            <div class="form-group">
+                <label for="class_to_join">Class to Join: *</label>
+                <select id="class_to_join" name="class_to_join" required>
+                    <option value="">Select Class</option>
+                    <option value="Baby Class">Baby Class</option>
+                    <option value="Pre-Primary I">Pre-Primary I</option>
+                    <option value="Pre-Primary II">Pre-Primary II</option>
+                    <option value="Standard I">Standard I</option>
+                    <option value="Standard II">Standard II</option>
+                    <option value="Standard III">Standard III</option>
+                    <option value="Standard IV">Standard IV</option>
+                    <option value="Standard V">Standard V</option>
+                    <option value="Standard VI">Standard VI</option>
+                    <option value="Standard VII">Standard VII</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="student_name">Student First Name: *</label>
+                <input type="text" id="student_name" name="student_name" required placeholder="Enter student's first name">
+            </div>
+            
+            <div class="form-group">
+                <label for="student_surname">Student Surname: *</label>
+                <input type="text" id="student_surname" name="student_surname" required placeholder="Enter student's surname">
+            </div>
+            
+            <div class="form-group">
+                <label for="father_name">Father's Name:</label>
+                <input type="text" id="father_name" name="father_name" placeholder="Enter father's name">
+            </div>
+            
+            <div class="form-group">
+                <label for="father_phone">Father's Phone:</label>
+                <input type="tel" id="father_phone" name="father_phone" placeholder="Enter father's phone">
+            </div>
+            
+            <button type="submit" class="btn" id="submitBtn">Submit Test Application</button>
+        </form>
+        
+        <div id="result"></div>
+        
+        <div id="debugInfo" class="debug-info" style="display: none;">
+            <h4>Debug Information:</h4>
+            <div id="debugContent"></div>
+        </div>
+        
+        <div class="alert alert-info">
+            <h4>🔍 What this test does:</h4>
+            <ul>
+                <li>Tests both the original and fixed process_application.php</li>
+                <li>Shows detailed error information</li>
+                <li>Displays raw server responses</li>
+                <li>Helps identify the exact cause of the error</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const resultDiv = document.getElementById('result');
+            const debugInfo = document.getElementById('debugInfo');
+            const debugContent = document.getElementById('debugContent');
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Testing...';
+            resultDiv.innerHTML = '<div class="alert alert-info">🔄 Testing form submission...</div>';
+            debugInfo.style.display = 'block';
+            debugContent.innerHTML = '';
+            
+            // Get form data
+            const formData = new FormData(this);
+            
+            // Test 1: Try the original process_application.php
+            debugContent.innerHTML += '<h5>Test 1: Original process_application.php</h5>';
+            
+            fetch('process_application.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                debugContent.innerHTML += `Status: ${response.status}<br>`;
+                debugContent.innerHTML += `Headers: ${JSON.stringify([...response.headers])}<br>`;
+                return response.text();
+            })
+            .then(text => {
+                debugContent.innerHTML += `Raw Response: <pre>${text.substring(0, 500)}${text.length > 500 ? '...' : ''}</pre>`;
+                
+                try {
+                    const data = JSON.parse(text);
+                    debugContent.innerHTML += `Parsed JSON: <pre>${JSON.stringify(data, null, 2)}</pre>`;
+                    
+                    if (data.success) {
+                        resultDiv.innerHTML = `
+                            <div class="alert alert-success">
+                                <h4>✅ Success with Original Script!</h4>
+                                <p><strong>Message:</strong> ${data.message}</p>
+                                <p><strong>Application No:</strong> ${data.application_no}</p>
+                            </div>
+                        `;
+                    } else {
+                        resultDiv.innerHTML = `
+                            <div class="alert alert-danger">
+                                <h4>❌ Error with Original Script</h4>
+                                <p><strong>Message:</strong> ${data.message}</p>
+                            </div>
+                        `;
+                        
+                        // Test 2: Try the fixed version
+                        testFixedVersion(formData);
+                    }
+                } catch (parseError) {
+                    debugContent.innerHTML += `JSON Parse Error: ${parseError.message}<br>`;
+                    resultDiv.innerHTML = `
+                        <div class="alert alert-danger">
+                            <h4>❌ Original Script Returns Invalid JSON</h4>
+                            <p>This is likely causing the "An error occurred" message.</p>
+                            <p><strong>Parse Error:</strong> ${parseError.message}</p>
+                        </div>
+                    `;
+                    
+                    // Test 2: Try the fixed version
+                    testFixedVersion(formData);
+                }
+            })
+            .catch(error => {
+                debugContent.innerHTML += `Fetch Error: ${error.message}<br>`;
+                resultDiv.innerHTML = `
+                    <div class="alert alert-danger">
+                        <h4>❌ Network Error with Original Script</h4>
+                        <p><strong>Error:</strong> ${error.message}</p>
+                    </div>
+                `;
+                
+                // Test 2: Try the fixed version
+                testFixedVersion(formData);
+            });
+            
+            function testFixedVersion(formData) {
+                debugContent.innerHTML += '<h5>Test 2: Fixed process_application_fixed.php</h5>';
+                
+                fetch('process_application_fixed.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    debugContent.innerHTML += `Fixed Status: ${response.status}<br>`;
+                    return response.text();
+                })
+                .then(text => {
+                    debugContent.innerHTML += `Fixed Raw Response: <pre>${text.substring(0, 500)}${text.length > 500 ? '...' : ''}</pre>`;
+                    
+                    try {
+                        const data = JSON.parse(text);
+                        debugContent.innerHTML += `Fixed Parsed JSON: <pre>${JSON.stringify(data, null, 2)}</pre>`;
+                        
+                        if (data.success) {
+                            resultDiv.innerHTML += `
+                                <div class="alert alert-success">
+                                    <h4>✅ Success with Fixed Script!</h4>
+                                    <p><strong>Message:</strong> ${data.message}</p>
+                                    <p><strong>Application No:</strong> ${data.application_no}</p>
+                                    <p><strong>Solution:</strong> Use process_application_fixed.php instead</p>
+                                </div>
+                            `;
+                        } else {
+                            resultDiv.innerHTML += `
+                                <div class="alert alert-danger">
+                                    <h4>❌ Error with Fixed Script Too</h4>
+                                    <p><strong>Message:</strong> ${data.message}</p>
+                                </div>
+                            `;
+                        }
+                    } catch (parseError) {
+                        debugContent.innerHTML += `Fixed JSON Parse Error: ${parseError.message}<br>`;
+                        resultDiv.innerHTML += `
+                            <div class="alert alert-danger">
+                                <h4>❌ Fixed Script Also Returns Invalid JSON</h4>
+                                <p><strong>Parse Error:</strong> ${parseError.message}</p>
+                            </div>
+                        `;
+                    }
+                })
+                .catch(error => {
+                    debugContent.innerHTML += `Fixed Fetch Error: ${error.message}<br>`;
+                    resultDiv.innerHTML += `
+                        <div class="alert alert-danger">
+                            <h4>❌ Network Error with Fixed Script</h4>
+                            <p><strong>Error:</strong> ${error.message}</p>
+                        </div>
+                    `;
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit Test Application';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

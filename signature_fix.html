@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Signature Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .signature-section {
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            background: #f8f9fa;
+        }
+        .signature-canvas {
+            border: 2px dashed #ced4da;
+            border-radius: 8px;
+            background: white;
+            cursor: crosshair;
+            display: block;
+            margin: 10px 0;
+        }
+        .signature-upload {
+            border: 2px dashed #ced4da;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            background: white;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .signature-upload:hover {
+            border-color: #007bff;
+            background: #f8f9fa;
+        }
+        .signature-upload.dragover {
+            border-color: #007bff;
+            background: #e3f2fd;
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .btn-secondary {
+            background: #6c757d;
+        }
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+        .btn-danger {
+            background: #dc3545;
+        }
+        .btn-danger:hover {
+            background: #c82333;
+        }
+        .signature-preview {
+            max-width: 200px;
+            max-height: 100px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .official-section {
+            border: 2px solid #6c757d;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            background: #f8f9fa;
+        }
+        .official-header {
+            background: #6c757d;
+            color: white;
+            padding: 10px;
+            margin: -20px -20px 20px -20px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #495057;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .row {
+            display: flex;
+            gap: 15px;
+        }
+        .col {
+            flex: 1;
+        }
+        .signature-controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+        .tab-button {
+            padding: 8px 16px;
+            border: 1px solid #ced4da;
+            background: #f8f9fa;
+            cursor: pointer;
+            border-radius: 4px 4px 0 0;
+        }
+        .tab-button.active {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🖊️ Interactive Signature & Official Use Section</h1>
+        
+        <div class="signature-section">
+            <h3>📝 Parent/Guardian Signature</h3>
+            
+            <div class="tab-buttons">
+                <div class="tab-button active" onclick="switchTab('draw')">Draw Signature</div>
+                <div class="tab-button" onclick="switchTab('upload')">Upload Image</div>
+                <div class="tab-button" onclick="switchTab('type')">Type Name</div>
+            </div>
+            
+            <!-- Draw Signature Tab -->
+            <div id="draw-tab" class="tab-content active">
+                <p>Draw your signature in the box below:</p>
+                <canvas id="signatureCanvas" class="signature-canvas" width="400" height="150"></canvas>
+                <div class="signature-controls">
+                    <button class="btn" onclick="clearSignature()">Clear</button>
+                    <button class="btn btn-secondary" onclick="saveSignature()">Save Signature</button>
+                </div>
+            </div>
+            
+            <!-- Upload Image Tab -->
+            <div id="upload-tab" class="tab-content">
+                <div class="signature-upload" id="uploadArea">
+                    <p>📁 Click to upload signature image or drag & drop</p>
+                    <p><small>Supported formats: JPG, PNG, GIF (Max 2MB)</small></p>
+                    <input type="file" id="signatureFile" accept="image/*" style="display: none;">
+                </div>
+                <div id="uploadPreview"></div>
+            </div>
+            
+            <!-- Type Name Tab -->
+            <div id="type-tab" class="tab-content">
+                <div class="form-group">
+                    <label>Type your full name:</label>
+                    <input type="text" id="typedName" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label>Select font style:</label>
+                    <select id="fontStyle">
+                        <option value="cursive">Cursive</option>
+                        <option value="serif">Serif</option>
+                        <option value="sans-serif">Sans-serif</option>
+                        <option value="monospace">Monospace</option>
+                    </select>
+                </div>
+                <div id="namePreview" style="padding: 20px; border: 1px solid #ddd; margin: 10px 0; min-height: 60px; display: flex; align-items: center; justify-content: center; font-size: 24px;"></div>
+            </div>
+        </div>
+        
+        <div class="official-section">
+            <div class="official-header">
+                FOR OFFICIAL USE ONLY
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Admission Decision:</label>
+                        <select id="admissionDecision">
+                            <option value="">Select Decision</option>
+                            <option value="ADMITTED">ADMITTED</option>
+                            <option value="NOT ADMITTED">NOT ADMITTED</option>
+                            <option value="PENDING">PENDING REVIEW</option>
+                            <option value="CONDITIONAL">CONDITIONAL ADMISSION</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Decision Date:</label>
+                        <input type="date" id="decisionDate">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Comments/Notes:</label>
+                <textarea id="officialComments" rows="3" placeholder="Enter any additional comments or requirements..."></textarea>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Head Master/Mistress Name:</label>
+                        <input type="text" id="headMasterName" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label>Head Master/Mistress Signature:</label>
+                        <canvas id="headMasterSignature" class="signature-canvas" width="300" height="100"></canvas>
+                        <div class="signature-controls">
+                            <button class="btn" onclick="clearHeadMasterSignature()">Clear</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Academic Master/Mistress Name:</label>
+                        <input type="text" id="academicMasterName" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label>Academic Master/Mistress Signature:</label>
+                        <canvas id="academicMasterSignature" class="signature-canvas" width="300" height="100"></canvas>
+                        <div class="signature-controls">
+                            <button class="btn" onclick="clearAcademicMasterSignature()">Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" onclick="saveOfficialData()">Save Official Data</button>
+                <button class="btn btn-secondary" onclick="printForm()">Print Form</button>
+            </div>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #e9ecef; border-radius: 5px;">
+            <h3>📋 Implementation Instructions</h3>
+            <p>To add this functionality to your application form:</p>
+            <ol>
+                <li>Copy the signature canvas and upload functionality</li>
+                <li>Add the official use section with form fields</li>
+                <li>Include the JavaScript for drawing and file handling</li>
+                <li>Update the form submission to include signature data</li>
+                <li>Modify the admin panel to show and edit official decisions</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Signature Canvas Setup
+        let canvas = document.getElementById('signatureCanvas');
+        let ctx = canvas.getContext('2d');
+        let isDrawing = false;
+        
+        // Head Master Signature Canvas
+        let headMasterCanvas = document.getElementById('headMasterSignature');
+        let headMasterCtx = headMasterCanvas.getContext('2d');
+        let isDrawingHeadMaster = false;
+        
+        // Academic Master Signature Canvas
+        let academicMasterCanvas = document.getElementById('academicMasterSignature');
+        let academicMasterCtx = academicMasterCanvas.getContext('2d');
+        let isDrawingAcademicMaster = false;
+        
+        // Setup canvas drawing for main signature
+        function setupCanvas(canvas, ctx, isDrawingVar) {
+            canvas.addEventListener('mousedown', startDrawing);
+            canvas.addEventListener('mousemove', draw);
+            canvas.addEventListener('mouseup', stopDrawing);
+            canvas.addEventListener('mouseout', stopDrawing);
+            
+            // Touch events for mobile
+            canvas.addEventListener('touchstart', handleTouch);
+            canvas.addEventListener('touchmove', handleTouch);
+            canvas.addEventListener('touchend', stopDrawing);
+            
+            function startDrawing(e) {
+                isDrawing = true;
+                draw(e);
+            }
+            
+            function draw(e) {
+                if (!isDrawing) return;
+                
+                const rect = canvas.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                ctx.lineWidth = 2;
+                ctx.lineCap = 'round';
+                ctx.strokeStyle = '#000';
+                
+                ctx.lineTo(x, y);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+            }
+            
+            function stopDrawing() {
+                if (isDrawing) {
+                    isDrawing = false;
+                    ctx.beginPath();
+                }
+            }
+            
+            function handleTouch(e) {
+                e.preventDefault();
+                const touch = e.touches[0];
+                const mouseEvent = new MouseEvent(e.type === 'touchstart' ? 'mousedown' : 
+                                                 e.type === 'touchmove' ? 'mousemove' : 'mouseup', {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                canvas.dispatchEvent(mouseEvent);
+            }
+        }
+        
+        // Setup all canvases
+        setupCanvas(canvas, ctx, 'isDrawing');
+        setupCanvas(headMasterCanvas, headMasterCtx, 'isDrawingHeadMaster');
+        setupCanvas(academicMasterCanvas, academicMasterCtx, 'isDrawingAcademicMaster');
+        
+        // Tab switching
+        function switchTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabName + '-tab').classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        // Clear signature functions
+        function clearSignature() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+        
+        function clearHeadMasterSignature() {
+            headMasterCtx.clearRect(0, 0, headMasterCanvas.width, headMasterCanvas.height);
+        }
+        
+        function clearAcademicMasterSignature() {
+            academicMasterCtx.clearRect(0, 0, academicMasterCanvas.width, academicMasterCanvas.height);
+        }
+        
+        // Save signature
+        function saveSignature() {
+            const dataURL = canvas.toDataURL();
+            console.log('Signature saved:', dataURL);
+            alert('Signature saved successfully!');
+        }
+        
+        // File upload handling
+        document.getElementById('uploadArea').addEventListener('click', function() {
+            document.getElementById('signatureFile').click();
+        });
+        
+        document.getElementById('signatureFile').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                if (file.size > 2 * 1024 * 1024) {
+                    alert('File size must be less than 2MB');
+                    return;
+                }
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.className = 'signature-preview';
+                    
+                    const preview = document.getElementById('uploadPreview');
+                    preview.innerHTML = '';
+                    preview.appendChild(img);
+                    
+                    const removeBtn = document.createElement('button');
+                    removeBtn.textContent = 'Remove';
+                    removeBtn.className = 'btn btn-danger';
+                    removeBtn.onclick = function() {
+                        preview.innerHTML = '';
+                        document.getElementById('signatureFile').value = '';
+                    };
+                    preview.appendChild(removeBtn);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        // Drag and drop
+        const uploadArea = document.getElementById('uploadArea');
+        
+        uploadArea.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+        
+        uploadArea.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+        });
+        
+        uploadArea.addEventListener('drop', function(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                document.getElementById('signatureFile').files = files;
+                document.getElementById('signatureFile').dispatchEvent(new Event('change'));
+            }
+        });
+        
+        // Typed name preview
+        document.getElementById('typedName').addEventListener('input', updateNamePreview);
+        document.getElementById('fontStyle').addEventListener('change', updateNamePreview);
+        
+        function updateNamePreview() {
+            const name = document.getElementById('typedName').value;
+            const font = document.getElementById('fontStyle').value;
+            const preview = document.getElementById('namePreview');
+            
+            preview.style.fontFamily = font;
+            preview.textContent = name || 'Your name will appear here';
+            preview.style.color = name ? '#000' : '#999';
+        }
+        
+        // Initialize name preview
+        updateNamePreview();
+        
+        // Save official data
+        function saveOfficialData() {
+            const data = {
+                admissionDecision: document.getElementById('admissionDecision').value,
+                decisionDate: document.getElementById('decisionDate').value,
+                officialComments: document.getElementById('officialComments').value,
+                headMasterName: document.getElementById('headMasterName').value,
+                academicMasterName: document.getElementById('academicMasterName').value,
+                headMasterSignature: headMasterCanvas.toDataURL(),
+                academicMasterSignature: academicMasterCanvas.toDataURL()
+            };
+            
+            console.log('Official data:', data);
+            alert('Official data saved successfully!');
+        }
+        
+        // Print form
+        function printForm() {
+            window.print();
+        }
+        
+        // Set current date as default
+        document.getElementById('decisionDate').value = new Date().toISOString().split('T')[0];
+    </script>
+</body>
+</html>
