@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Marry Mother Of Mercy - Free Bootstrap 4 Template by JUP TECHNOLOGY</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- FontAwesome for modern icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom Color Scheme CSS -->
+    <style>
+      /* Color Variables */
+      :root {
+        --primary-blue: rgb(44, 172, 238);
+        --primary-maroon: maroon;
+        --white: white;
+        --black: black;
+        --light-blue: rgba(44, 172, 238, 0.1);
+        --light-maroon: rgba(128, 0, 0, 0.1);
+      }
+      
+      /* Main Color Scheme Updates */
+      .bg-primary {
+        background-color: var(--primary-blue) !important;
+      }
+      
+      .bg-secondary {
+        background-color: var(--primary-maroon) !important;
+      }
+      
+      .bg-tertiary {
+        background-color: var(--primary-blue) !important;
+      }
+      
+      .bg-fifth {
+        background-color: var(--primary-maroon) !important;
+      }
+      
+      .text-primary {
+        color: var(--primary-blue) !important;
+      }
+      
+      .btn-primary {
+        background: var(--primary-blue) !important;
+        border-color: var(--primary-blue) !important;
+        color: var(--white) !important;
+      }
+      
+      .btn-primary:hover {
+        background: var(--primary-maroon) !important;
+        border-color: var(--primary-maroon) !important;
+        color: var(--white) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(128,0,0,0.4);
+      }
+      
+      /* Navigation Colors */
+      .navbar-dark,
+      .bg-dark,
+      #ftco-navbar {
+        background-color: var(--white) !important;
+        background: var(--white) !important;
+        border-bottom: 1px solid #e9ecef;
+      }
+      
+      .navbar-nav .nav-link {
+        color: var(--black) !important;
+      }
+      
+      .navbar-nav .nav-link:hover {
+        color: var(--primary-blue) !important;
+      }
+      
+      .navbar-nav .nav-item.active .nav-link {
+        color: var(--primary-blue) !important;
+        font-weight: bold;
+      }
+      
+      /* Override any Bootstrap default colors */
+      .navbar-dark .navbar-nav .nav-link {
+        color: var(--black) !important;
+      }
+      
+      .navbar-dark .navbar-nav .nav-link:hover,
+      .navbar-dark .navbar-nav .nav-link:focus {
+        color: var(--primary-blue) !important;
+      }
+      
+      .navbar-dark .navbar-nav .active > .nav-link,
+      .navbar-dark .navbar-nav .nav-link.active {
+        color: var(--primary-blue) !important;
+        font-weight: bold;
+      }
+      
+      /* Links */
+      a {
+        color: var(--primary-blue);
+      }
+      
+      a:hover {
+        color: var(--primary-maroon);
+      }
+      
+      /* Hero Section */
+      .hero-wrap .overlay {
+        background: linear-gradient(45deg, rgba(0,0,0,0.5), rgba(128,0,0,0.3)) !important;
+      }
+      
+      .breadcrumbs a {
+        color: var(--primary-blue) !important;
+      }
+      
+      /* Course Cards */
+      .course h3 a {
+        color: var(--primary-blue) !important;
+      }
+      
+      .course h3 a:hover {
+        color: var(--primary-maroon) !important;
+      }
+      
+      .subheading {
+        color: var(--primary-blue) !important;
+      }
+      
+      /* Footer Styling */
+      .ftco-footer {
+        background-color: var(--black) !important;
+      }
+      
+      .ftco-footer h2 {
+        color: var(--white) !important;
+      }
+      
+      .ftco-footer .text {
+        color: rgba(255,255,255,0.8) !important;
+      }
+      
+      .ftco-footer a {
+        color: rgba(255,255,255,0.8) !important;
+      }
+      
+      .ftco-footer a:hover {
+        color: var(--primary-blue) !important;
+      }
+      
+      /* Enhanced Curriculum Section Styling */
+      .curriculum-section {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        padding: 80px 0;
+      }
+      
+      .grade-card {
+        background: var(--white);
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        transition: all 0.4s ease;
+        overflow: hidden;
+        border: 2px solid transparent;
+        margin-bottom: 30px;
+        position: relative;
+      }
+      
+      .grade-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(44,172,238,0.2);
+        border-color: var(--primary-blue);
+      }
+      
+      .grade-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-maroon));
+      }
+      
+      .grade-header {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon));
+        color: var(--white);
+        padding: 25px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .grade-header::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+        transform: rotate(45deg);
+        transition: all 0.6s ease;
+        opacity: 0;
+      }
+      
+      .grade-card:hover .grade-header::before {
+        opacity: 1;
+        animation: shine 1.5s ease-in-out;
+      }
+      
+      @keyframes shine {
+        0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+        100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+      }
+      
+      .grade-icon {
+        width: 80px;
+        height: 80px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+        border: 3px solid rgba(255,255,255,0.3);
+        transition: all 0.3s ease;
+      }
+      
+      .grade-card:hover .grade-icon {
+        transform: scale(1.1);
+        background: rgba(255,255,255,0.3);
+      }
+      
+      .grade-icon i {
+        font-size: 2.5rem;
+        color: var(--white);
+      }
+      
+      .grade-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+      
+      .grade-subtitle {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        font-weight: 500;
+      }
+      
+      .subjects-list {
+        padding: 30px;
+      }
+      
+      .subject-item {
+        display: flex;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #f1f3f4;
+        transition: all 0.3s ease;
+      }
+      
+      .subject-item:last-child {
+        border-bottom: none;
+      }
+      
+      .subject-item:hover {
+        background: rgba(44,172,238,0.05);
+        padding-left: 10px;
+        border-radius: 8px;
+      }
+      
+      .subject-number {
+        width: 35px;
+        height: 35px;
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon));
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        margin-right: 15px;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+      }
+      
+      .subject-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #2c3e50;
+        flex-grow: 1;
+      }
+      
+      .subject-icon {
+        width: 40px;
+        height: 40px;
+        background: rgba(44,172,238,0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 15px;
+        transition: all 0.3s ease;
+      }
+      
+      .subject-item:hover .subject-icon {
+        background: rgba(44,172,238,0.2);
+        transform: scale(1.1);
+      }
+      
+      .subject-icon i {
+        color: var(--primary-blue);
+        font-size: 1.2rem;
+      }
+      
+      /* Grade-specific colors */
+      .grade-1-2 .grade-header {
+        background: linear-gradient(135deg, #28a745, #20c997);
+      }
+      
+      .grade-1-2 .subject-number {
+        background: linear-gradient(135deg, #28a745, #20c997);
+      }
+      
+      .grade-3-4 .grade-header {
+        background: linear-gradient(135deg, #007bff, #6610f2);
+      }
+      
+      .grade-3-4 .subject-number {
+        background: linear-gradient(135deg, #007bff, #6610f2);
+      }
+      
+      .grade-5-7 .grade-header {
+        background: linear-gradient(135deg, #dc3545, #fd7e14);
+      }
+      
+      .grade-5-7 .subject-number {
+        background: linear-gradient(135deg, #dc3545, #fd7e14);
+      }
+      
+      /* Section heading */
+      .curriculum-heading {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      
+      .curriculum-heading h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      
+      .curriculum-heading h2 span {
+        color: var(--primary-blue);
+        position: relative;
+      }
+      
+      .curriculum-heading h2 span::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-maroon));
+        border-radius: 2px;
+      }
+      
+      .curriculum-heading p {
+        font-size: 1.2rem;
+        color: #6c757d;
+        line-height: 1.6;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .curriculum-heading h2 {
+          font-size: 2.2rem;
+        }
+        
+        .grade-title {
+          font-size: 1.5rem;
+        }
+        
+        .grade-icon {
+          width: 60px;
+          height: 60px;
+        }
+        
+        .grade-icon i {
+          font-size: 2rem;
+        }
+        
+        .subjects-list {
+          padding: 20px;
+        }
+        
+        .subject-name {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+	  <div class="py-2 bg-primary">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+	    		<div class="col-lg-12 d-block">
+		    		<div class="row d-flex">
+			    		<div class="col-md-5 pr-4 d-flex topper align-items-center">
+			    			<div class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
+						    <span class="text">MAJOHE, RELINI MJI MPYA, DAR ES SALAAM, TANZANIA</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">motherofmercyprimaryschool@gmail.com</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">0787886959 & 0784168758</span>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center">
+	    	<a class="navbar-brand" href="index.html"><img src="images/marry.jpeg" alt="Marry Mother Of Mercy Logo" style="height: 80px; width: auto;"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <!-- <p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p> -->
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item"><a href="index.html" class="nav-link pl-0">Home</a></li>
+	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	        	<li class="nav-item"><a href="teacher.html" class="nav-link">Teacher</a></li>
+	        	<li class="nav-item active"><a href="courses.html" class="nav-link">Courses</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/IMG_1098.JPG');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-2 bread">Our Curriculum</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Courses <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+		<section class="curriculum-section">
+			<div class="container">
+				<div class="curriculum-heading ftco-animate">
+					<h2><span>Academic</span> Excellence</h2>
+					<p>Our comprehensive curriculum is designed to provide quality education from Grade I to VII, following the Tanzanian National Education Curriculum. We focus on building strong foundations in core subjects while nurturing creativity and critical thinking skills.</p>
+				</div>
+				
+				<div class="row">
+					<!-- Grade I and II -->
+					<div class="col-lg-4 col-md-6 ftco-animate">
+						<div class="grade-card grade-1-2">
+							<div class="grade-header">
+								<div class="grade-icon">
+									<i class="fas fa-seedling"></i>
+								</div>
+								<h3 class="grade-title">GRADE I & II</h3>
+								<p class="grade-subtitle">Foundation Learning</p>
+							</div>
+							<div class="subjects-list">
+								<div class="subject-item">
+									<div class="subject-number">1</div>
+									<div class="subject-name">Reading</div>
+									<div class="subject-icon"><i class="fas fa-book-open"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">2</div>
+									<div class="subject-name">Writing</div>
+									<div class="subject-icon"><i class="fas fa-pen"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">3</div>
+									<div class="subject-name">Listening and Speaking</div>
+									<div class="subject-icon"><i class="fas fa-comments"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">4</div>
+									<div class="subject-name">Arithmetic</div>
+									<div class="subject-icon"><i class="fas fa-calculator"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">5</div>
+									<div class="subject-name">Kiswahili</div>
+									<div class="subject-icon"><i class="fas fa-language"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">6</div>
+									<div class="subject-name">Culture, Arts & Sports</div>
+									<div class="subject-icon"><i class="fas fa-palette"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">7</div>
+									<div class="subject-name">Care for Health and Environment</div>
+									<div class="subject-icon"><i class="fas fa-leaf"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Grade III and IV -->
+					<div class="col-lg-4 col-md-6 ftco-animate">
+						<div class="grade-card grade-3-4">
+							<div class="grade-header">
+								<div class="grade-icon">
+									<i class="fas fa-tree"></i>
+								</div>
+								<h3 class="grade-title">GRADE III & IV</h3>
+								<p class="grade-subtitle">Intermediate Development</p>
+							</div>
+							<div class="subjects-list">
+								<div class="subject-item">
+									<div class="subject-number">1</div>
+									<div class="subject-name">English</div>
+									<div class="subject-icon"><i class="fas fa-globe"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">2</div>
+									<div class="subject-name">Kiswahili</div>
+									<div class="subject-icon"><i class="fas fa-language"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">3</div>
+									<div class="subject-name">Mathematics</div>
+									<div class="subject-icon"><i class="fas fa-square-root-alt"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">4</div>
+									<div class="subject-name">Science</div>
+									<div class="subject-icon"><i class="fas fa-flask"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">5</div>
+									<div class="subject-name">Geography & Environment</div>
+									<div class="subject-icon"><i class="fas fa-map"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">6</div>
+									<div class="subject-name">Historia ya Tanzania & Maadili</div>
+									<div class="subject-icon"><i class="fas fa-landmark"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">7</div>
+									<div class="subject-name">Culture, Arts & Sports</div>
+									<div class="subject-icon"><i class="fas fa-running"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Grade V to VII -->
+					<div class="col-lg-4 col-md-6 ftco-animate">
+						<div class="grade-card grade-5-7">
+							<div class="grade-header">
+								<div class="grade-icon">
+									<i class="fas fa-graduation-cap"></i>
+								</div>
+								<h3 class="grade-title">GRADE V - VII</h3>
+								<p class="grade-subtitle">Advanced Preparation</p>
+							</div>
+							<div class="subjects-list">
+								<div class="subject-item">
+									<div class="subject-number">1</div>
+									<div class="subject-name">English</div>
+									<div class="subject-icon"><i class="fas fa-globe-americas"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">2</div>
+									<div class="subject-name">Kiswahili</div>
+									<div class="subject-icon"><i class="fas fa-flag"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">3</div>
+									<div class="subject-name">Mathematics</div>
+									<div class="subject-icon"><i class="fas fa-infinity"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">4</div>
+									<div class="subject-name">Science</div>
+									<div class="subject-icon"><i class="fas fa-atom"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">5</div>
+									<div class="subject-name">Social Studies</div>
+									<div class="subject-icon"><i class="fas fa-users"></i></div>
+								</div>
+								<div class="subject-item">
+									<div class="subject-number">6</div>
+									<div class="subject-name">Civic & Moral Education</div>
+									<div class="subject-icon"><i class="fas fa-balance-scale"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Additional Information Section -->
+				<div class="row mt-5">
+					<div class="col-md-12 ftco-animate">
+						<div class="curriculum-info bg-white p-5 rounded shadow-lg">
+							<div class="row align-items-center">
+								<div class="col-md-8">
+									<h3 class="text-primary font-weight-bold mb-3">📚 Comprehensive Learning Approach</h3>
+									<p class="lead mb-3">Our curriculum follows the <strong>Tanzanian National Education Standards</strong> while incorporating modern teaching methodologies and Christian values.</p>
+									<div class="row">
+										<div class="col-md-6">
+											<ul class="list-unstyled">
+												<li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> <strong>Competency-Based Learning</strong></li>
+												<li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> <strong>Interactive Teaching Methods</strong></li>
+												<li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> <strong>Continuous Assessment</strong></li>
+											</ul>
+										</div>
+										<div class="col-md-6">
+											<ul class="list-unstyled">
+												<li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> <strong>Character Development</strong></li>
+												<li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> <strong>Practical Learning</strong></li>
+												<li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> <strong>Spiritual Guidance</strong></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 text-center">
+									<div class="curriculum-image">
+										<img src="images/IMG_1093.JPG" alt="Students Learning" class="img-fluid rounded shadow" style="max-height: 250px; object-fit: cover;">
+									</div>
+								</div>
+							</div>
+							<div class="text-center mt-4">
+								<a href="contact.html" class="btn btn-primary btn-lg px-5 py-3">
+									<i class="fas fa-phone mr-2"></i>Contact Us for More Information
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">MAJOHE, RELINI MJI MPYA, DAR ES SALAAM, TANZANIA</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">0787886959 & 0784168758</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">motherofmercyprimaryschool@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+              <h2 class="ftco-heading-2">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                <li><a href="about.html"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+                <li><a href="courses.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Courses</a></li>
+                <li><a href="teacher.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Teachers</a></li>
+                <li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Deparments</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Subscribe Us!</h2>
+              <form action="#" class="subscribe-form">
+                <div class="form-group">
+                  <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
+                  <input type="submit" value="Subscribe" class="form-control submit px-3">
+                </div>
+              </form>
+            </div>
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
+            	<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to JUP TECHNOLOGY can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Developed  <i class="icon-heart" aria-hidden="true"></i> by <a href="https://JUP TECHNOLOGY.com" target="_blank">JUP TECHNOLOGY</a>
+  <!-- Link back to JUP TECHNOLOGY can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

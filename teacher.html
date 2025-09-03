@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Marry Mother Of Mercy - Free Bootstrap 4 Template by JUP TECHNOLOGY</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- FontAwesome for modern icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom Color Scheme CSS -->
+    <style>
+      /* Color Variables */
+      :root {
+        --primary-blue: rgb(44, 172, 238);
+        --primary-maroon: maroon;
+        --white: white;
+        --black: black;
+        --light-blue: rgba(44, 172, 238, 0.1);
+        --light-maroon: rgba(128, 0, 0, 0.1);
+      }
+      
+      /* Main Color Scheme Updates */
+      .bg-primary {
+        background-color: var(--primary-blue) !important;
+      }
+      
+      .bg-secondary {
+        background-color: var(--primary-maroon) !important;
+      }
+      
+      .bg-tertiary {
+        background-color: var(--primary-blue) !important;
+      }
+      
+      .bg-fifth {
+        background-color: var(--primary-maroon) !important;
+      }
+      
+      .text-primary {
+        color: var(--primary-blue) !important;
+      }
+      
+      .btn-primary {
+        background: var(--primary-blue) !important;
+        border-color: var(--primary-blue) !important;
+        color: var(--white) !important;
+      }
+      
+      .btn-primary:hover {
+        background: var(--primary-maroon) !important;
+        border-color: var(--primary-maroon) !important;
+        color: var(--white) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(128,0,0,0.4);
+      }
+      
+      .btn-secondary {
+        background: var(--primary-maroon) !important;
+        border-color: var(--primary-maroon) !important;
+        color: var(--white) !important;
+      }
+      
+      .btn-secondary:hover {
+        background: var(--primary-blue) !important;
+        border-color: var(--primary-blue) !important;
+        color: var(--white) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(44,172,238,0.4);
+      }
+      
+      /* Navigation Colors */
+      .navbar-dark,
+      .bg-dark,
+      #ftco-navbar {
+        background-color: var(--white) !important;
+        background: var(--white) !important;
+        border-bottom: 1px solid #e9ecef;
+      }
+      
+      .navbar-nav .nav-link {
+        color: var(--black) !important;
+      }
+      
+      .navbar-nav .nav-link:hover {
+        color: var(--primary-blue) !important;
+      }
+      
+      .navbar-nav .nav-item.active .nav-link {
+        color: var(--primary-blue) !important;
+        font-weight: bold;
+      }
+      
+      /* Override any Bootstrap default colors */
+      .navbar-dark .navbar-nav .nav-link {
+        color: var(--black) !important;
+      }
+      
+      .navbar-dark .navbar-nav .nav-link:hover,
+      .navbar-dark .navbar-nav .nav-link:focus {
+        color: var(--primary-blue) !important;
+      }
+      
+      .navbar-dark .navbar-nav .active > .nav-link,
+      .navbar-dark .navbar-nav .nav-link.active {
+        color: var(--primary-blue) !important;
+        font-weight: bold;
+      }
+      
+      /* Links */
+      a {
+        color: var(--primary-blue);
+      }
+      
+      a:hover {
+        color: var(--primary-maroon);
+      }
+      
+      /* Hero Section */
+      .hero-wrap .overlay {
+        background: linear-gradient(45deg, rgba(0,0,0,0.5), rgba(128,0,0,0.3)) !important;
+      }
+      
+      .breadcrumbs a {
+        color: var(--primary-blue) !important;
+      }
+      
+      /* Staff Cards */
+      .staff .position {
+        color: var(--primary-blue) !important;
+      }
+      
+      .ftco-social li a {
+        background: var(--primary-blue) !important;
+      }
+      
+      .ftco-social li a:hover {
+        background: var(--primary-maroon) !important;
+      }
+      
+      /* Footer Styling */
+      .ftco-footer {
+        background-color: var(--black) !important;
+      }
+      
+      .ftco-footer h2 {
+        color: var(--white) !important;
+      }
+      
+      .ftco-footer .text {
+        color: rgba(255,255,255,0.8) !important;
+      }
+      
+      .ftco-footer a {
+        color: rgba(255,255,255,0.8) !important;
+      }
+      
+      .ftco-footer a:hover {
+        color: var(--primary-blue) !important;
+      }
+      
+      /* Enhanced Teacher Page Styling */
+      .teacher-hero {
+        background: linear-gradient(135deg, rgba(44,172,238,0.9), rgba(128,0,0,0.8)), url('images/IMG_1093.JPG');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      
+      /* Enhanced Staff Cards */
+      .staff {
+        background: var(--white);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: all 0.4s ease;
+        overflow: hidden;
+        border: 2px solid transparent;
+        margin-bottom: 30px;
+        position: relative;
+      }
+      
+      .staff::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-maroon));
+        z-index: 1;
+      }
+      
+      .staff:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(44,172,238,0.2);
+        border-color: var(--primary-blue);
+      }
+      
+      .staff .img-wrap {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px 20px 0 0;
+      }
+      
+      .staff .img {
+        height: 280px;
+        transition: all 0.4s ease;
+        position: relative;
+      }
+      
+      .staff:hover .img {
+        transform: scale(1.05);
+      }
+      
+      .staff .img::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, transparent, rgba(44,172,238,0.1));
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+      
+      .staff:hover .img::after {
+        opacity: 1;
+      }
+      
+      .staff .text {
+        padding: 25px 20px;
+        background: var(--white);
+        position: relative;
+      }
+      
+      .staff .text h3 {
+        color: #2c3e50;
+        font-weight: 700;
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+        transition: color 0.3s ease;
+      }
+      
+      .staff:hover .text h3 {
+        color: var(--primary-blue);
+      }
+      
+      .staff .position {
+        color: var(--primary-blue) !important;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        display: block;
+      }
+      
+      .staff .faded {
+        opacity: 1;
+        transition: all 0.3s ease;
+      }
+      
+      .staff .faded p {
+        color: #6c757d;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      
+      /* Enhanced Social Icons */
+      .ftco-social {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 15px;
+      }
+      
+      .ftco-social li {
+        list-style: none;
+      }
+      
+      .ftco-social li a {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon)) !important;
+        color: var(--white) !important;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(44,172,238,0.3);
+        font-size: 0.9rem;
+      }
+      
+      .ftco-social li a:hover {
+        background: linear-gradient(135deg, var(--primary-maroon), var(--black)) !important;
+        transform: translateY(-3px) scale(1.1);
+        box-shadow: 0 6px 20px rgba(44,172,238,0.4);
+      }
+      
+      /* Section Header Enhancement */
+      .teacher-section-header {
+        text-align: center;
+        margin-bottom: 60px;
+        padding: 60px 0 0 0;
+      }
+      
+      .teacher-section-header h2 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      
+      .teacher-section-header h2 span {
+        color: var(--primary-blue);
+        position: relative;
+      }
+      
+      .teacher-section-header h2 span::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-maroon));
+        border-radius: 2px;
+      }
+      
+      .teacher-section-header p {
+        font-size: 1.2rem;
+        color: #6c757d;
+        line-height: 1.6;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      
+      /* Staff Statistics */
+      .staff-stats {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon));
+        color: var(--white);
+        padding: 60px 0;
+        margin: 60px 0;
+      }
+      
+      .stat-item {
+        text-align: center;
+        padding: 20px;
+      }
+      
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 10px;
+        display: block;
+        background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .stat-label {
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.9;
+      }
+      
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .teacher-section-header h2 {
+          font-size: 2.2rem;
+        }
+        
+        .staff .img {
+          height: 250px;
+        }
+        
+        .staff .text {
+          padding: 20px 15px;
+        }
+        
+        .staff .text h3 {
+          font-size: 1.2rem;
+        }
+        
+        .ftco-social {
+          gap: 8px;
+        }
+        
+        .ftco-social li a {
+          width: 35px;
+          height: 35px;
+          font-size: 0.8rem;
+        }
+        
+        .stat-number {
+          font-size: 2.5rem;
+        }
+        
+        .stat-label {
+          font-size: 1rem;
+        }
+      }
+      
+      /* Loading Animation for Images */
+      .staff .img {
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+      }
+      
+      /* Hover Effects for Better UX */
+      .staff {
+        cursor: pointer;
+      }
+      
+      .staff:hover .position {
+        color: var(--primary-maroon) !important;
+      }
+      
+      /* Enhanced Breadcrumb */
+      .breadcrumbs {
+        font-size: 1.1rem;
+      }
+      
+      .breadcrumbs a {
+        color: rgba(255,255,255,0.8) !important;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      
+      .breadcrumbs a:hover {
+        color: var(--white) !important;
+      }
+    </style>
+  </head>
+  <body>
+	  <div class="py-2 bg-primary">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+	    		<div class="col-lg-12 d-block">
+		    		<div class="row d-flex">
+			    		<div class="col-md-5 pr-4 d-flex topper align-items-center">
+			    			<div class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
+						    <span class="text">MAJOHE, RELINI MJI MPYA, DAR ES SALAAM, TANZANIA</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">motherofmercyprimaryschool@gmail.com</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">0787886959 & 0784168758</span>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center">
+	    	<a class="navbar-brand" href="index.html"><img src="images/marry.jpeg" alt="Marry Mother Of Mercy Logo" style="height: 80px; width: auto;"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <!-- <p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p> -->
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item"><a href="index.html" class="nav-link pl-0">Home</a></li>
+	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	        	<li class="nav-item active"><a href="teacher.html" class="nav-link">Teacher</a></li>
+	        	<li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <section class="hero-wrap hero-wrap-2 teacher-hero" style="background-image: url('images/IMG_1093.JPG');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-2 bread">Our Dedicated Teachers</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Teachers <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+		<!-- Staff Statistics Section -->
+		<section class="staff-stats">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-6">
+						<div class="stat-item ftco-animate">
+							<span class="stat-number">23</span>
+							<span class="stat-label">Qualified Teachers</span>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="stat-item ftco-animate">
+							<span class="stat-number">13+</span>
+							<span class="stat-label">Years Experience</span>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="stat-item ftco-animate">
+							<span class="stat-number">100%</span>
+							<span class="stat-label">Certified Staff</span>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="stat-item ftco-animate">
+							<span class="stat-number">350+</span>
+							<span class="stat-label">Students Taught</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="ftco-section ftco-no-pb">
+			<div class="container">
+				<div class="teacher-section-header ftco-animate">
+					<h2><span>Meet Our</span> Teaching Staff</h2>
+					<p>Our dedicated team of qualified educators brings passion, expertise, and commitment to nurturing young minds. Each teacher is carefully selected for their educational qualifications, teaching experience, and dedication to student success.</p>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/ass%20manager.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Assistant Manager</h3>
+								<span class="position mb-2">ASSISTANT MANAGER</span>
+								<div class="faded">
+									<p>Dedicated to supporting educational excellence and administrative efficiency at Mary Mother of Mercy.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/BURSAR.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>School Bursar</h3>
+								<span class="position mb-2">BURSAR</span>
+								<div class="faded">
+									<p>Managing school finances and ensuring transparent financial operations for the institution.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/MADAM%20DEMENTILIA.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Madam Dementilia</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Committed to nurturing young minds and fostering academic excellence in our students.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/MADAM%20ELIZA.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Madam Eliza</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Passionate educator dedicated to creating engaging learning experiences for all students.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/MADAM%20EVA.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Madam Eva</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Inspiring students to reach their full potential through innovative teaching methods.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/MADAM%20FRANSISCA.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Madam Fransisca</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Dedicated to building strong foundations in literacy and numeracy for young learners.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/MADAM%20IRENE.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Madam Irene</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Fostering creativity and critical thinking skills in our Pre-Primary students.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/Secretary.png);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>School Secretary</h3>
+								<span class="position mb-2">SECRETARY</span>
+								<div class="faded">
+									<p>Ensuring smooth administrative operations and excellent communication within the school.</p>
+										<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Additional Staff Row -->
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/MADAM%20JESCA.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Madam Jesca</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Specializing in early childhood development and creating nurturing learning environments.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/MADAM%20JUSTER.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Madam Juster</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Committed to excellence in primary education and student character development.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/MADAM%20LUCIANA.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Madam Luciana</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Experienced educator focusing on holistic child development and academic achievement.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/MADAM%20MARTHA.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Madam Martha</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Dedicated to creating inclusive learning environments for all students to succeed.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Fourth Row -->
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/MADAM%20MASAGE.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Madam Masage</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Passionate about mathematics and science education for primary school students.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/MADAM%20PASQUINA.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Madam Pasquina</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Expert in language arts and communication skills development for young learners.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/SIR%20ANOLD.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Sir Anold</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Dedicated male educator specializing in physical education and sports activities.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/SIR%20DAUD.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Sir Daud</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Experienced teacher focusing on mathematics and logical reasoning skills development.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Fifth Row -->
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/SIR%20DIETRICK.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Sir Dietrick</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Committed to science education and hands-on learning experiences for students.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/SIR%20FIDELIS.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Sir Fidelis</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Passionate about social studies and cultural education for primary students.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/SIR%20MAHERI.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Sir Maheri</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Dedicated to English language instruction and literacy development programs.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/SIR%20SARARA.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Sir Sarara</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Experienced in computer education and technology integration in learning.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Sixth Row -->
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/SIR%20SIMON.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Sir Simon</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Specializing in creative arts and music education for holistic student development.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/SIR%20WILLIAM.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Sir William</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Expert in religious education and moral guidance for character building.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/SIR%20WYCLIFF.jpg);"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Sir Wycliff</h3>
+								<span class="position mb-2">TEACHER</span>
+								<div class="faded">
+									<p>Dedicated to environmental science and nature studies for young learners.</p>
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">MAJOHE, RELINI MJI MPYA, DAR ES SALAAM, TANZANIA</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">0787886959 & 0784168758</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">motherofmercyprimaryschool@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+              <h2 class="ftco-heading-2">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                <li><a href="about.html"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+                <li><a href="courses.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Courses</a></li>
+                <li><a href="teacher.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Teachers</a></li>
+                <li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Deparments</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Subscribe Us!</h2>
+              <form action="#" class="subscribe-form">
+                <div class="form-group">
+                  <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
+                  <input type="submit" value="Subscribe" class="form-control submit px-3">
+                </div>
+              </form>
+            </div>
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
+            	<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to JUP TECHNOLOGY can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Developed  <i class="icon-heart" aria-hidden="true"></i> by <a href="https://JUP TECHNOLOGY.com" target="_blank">JUP TECHNOLOGY</a>
+  <!-- Link back to JUP TECHNOLOGY can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

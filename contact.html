@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Marry Mother Of Mercy - Free Bootstrap 4 Template by JUP TECHNOLOGY</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- FontAwesome for modern icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom Color Scheme CSS -->
+    <style>
+      /* Color Variables */
+      :root {
+        --primary-blue: rgb(44, 172, 238);
+        --primary-maroon: maroon;
+        --white: white;
+        --black: black;
+        --light-blue: rgba(44, 172, 238, 0.1);
+        --light-maroon: rgba(128, 0, 0, 0.1);
+      }
+      
+      /* Main Color Scheme Updates */
+      .bg-primary {
+        background-color: var(--primary-blue) !important;
+      }
+      
+      .bg-secondary {
+        background-color: var(--primary-maroon) !important;
+      }
+      
+      .bg-tertiary {
+        background-color: var(--primary-blue) !important;
+      }
+      
+      .bg-fifth {
+        background-color: var(--primary-maroon) !important;
+      }
+      
+      .text-primary {
+        color: var(--primary-blue) !important;
+      }
+      
+      .btn-primary {
+        background: var(--primary-blue) !important;
+        border-color: var(--primary-blue) !important;
+        color: var(--white) !important;
+      }
+      
+      .btn-primary:hover {
+        background: var(--primary-maroon) !important;
+        border-color: var(--primary-maroon) !important;
+        color: var(--white) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(128,0,0,0.4);
+      }
+      
+      /* Navigation Colors */
+      .navbar-dark,
+      .bg-dark,
+      #ftco-navbar {
+        background-color: var(--white) !important;
+        background: var(--white) !important;
+        border-bottom: 1px solid #e9ecef;
+      }
+      
+      .navbar-nav .nav-link {
+        color: var(--black) !important;
+      }
+      
+      .navbar-nav .nav-link:hover {
+        color: var(--primary-blue) !important;
+      }
+      
+      .navbar-nav .nav-item.active .nav-link {
+        color: var(--primary-blue) !important;
+        font-weight: bold;
+      }
+      
+      /* Override any Bootstrap default colors */
+      .navbar-dark .navbar-nav .nav-link {
+        color: var(--black) !important;
+      }
+      
+      .navbar-dark .navbar-nav .nav-link:hover,
+      .navbar-dark .navbar-nav .nav-link:focus {
+        color: var(--primary-blue) !important;
+      }
+      
+      .navbar-dark .navbar-nav .active > .nav-link,
+      .navbar-dark .navbar-nav .nav-link.active {
+        color: var(--primary-blue) !important;
+        font-weight: bold;
+      }
+      
+      /* Links */
+      a {
+        color: var(--primary-blue);
+      }
+      
+      a:hover {
+        color: var(--primary-maroon);
+      }
+      
+      /* Hero Section */
+      .hero-wrap .overlay {
+        background: linear-gradient(45deg, rgba(0,0,0,0.5), rgba(128,0,0,0.3)) !important;
+      }
+      
+      .breadcrumbs a {
+        color: var(--primary-blue) !important;
+      }
+      
+      /* Contact Info Boxes */
+      .contact-info .box h3 {
+        color: var(--primary-blue) !important;
+      }
+      
+      /* Form Elements */
+      .form-control:focus {
+        border-color: var(--primary-blue) !important;
+        box-shadow: 0 0 0 0.2rem rgba(44,172,238,0.25) !important;
+      }
+      
+      /* Footer Styling */
+      .ftco-footer {
+        background-color: var(--black) !important;
+      }
+      
+      .ftco-footer h2 {
+        color: var(--white) !important;
+      }
+      
+      .ftco-footer .text {
+        color: rgba(255,255,255,0.8) !important;
+      }
+      
+      .ftco-footer a {
+        color: rgba(255,255,255,0.8) !important;
+      }
+      
+      .ftco-footer a:hover {
+        color: var(--primary-blue) !important;
+      }
+      
+      /* Enhanced Contact Page Styling */
+      .contact-hero {
+        background: linear-gradient(135deg, rgba(44,172,238,0.9), rgba(128,0,0,0.8)), url('images/IMG_1100.JPG');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      
+      /* Contact Info Cards */
+      .contact-info-card {
+        background: var(--white);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .contact-info-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-maroon));
+      }
+      
+      .contact-info-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(44,172,238,0.2);
+        border-color: var(--primary-blue);
+      }
+      
+      .contact-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px auto;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(44,172,238,0.3);
+      }
+      
+      .contact-info-card:hover .contact-icon {
+        transform: scale(1.1);
+        box-shadow: 0 8px 25px rgba(44,172,238,0.5);
+      }
+      
+      .contact-icon i {
+        color: var(--white);
+        font-size: 1.8rem;
+      }
+      
+      .contact-info-card h3 {
+        color: var(--primary-blue) !important;
+        font-weight: 700;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+      }
+      
+      .contact-info-card p {
+        color: #495057;
+        line-height: 1.6;
+        margin-bottom: 0;
+      }
+      
+      .contact-info-card a {
+        color: var(--primary-blue);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      
+      .contact-info-card a:hover {
+        color: var(--primary-maroon);
+      }
+      
+      /* Contact Form Styling */
+      .contact-form-section {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        padding: 80px 0;
+      }
+      
+      .contact-form-container {
+        background: var(--white);
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        overflow: hidden;
+        border: 1px solid #f1f3f4;
+      }
+      
+      .form-section {
+        padding: 50px;
+        background: var(--white);
+      }
+      
+      .form-title {
+        color: var(--primary-blue);
+        font-weight: 700;
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        position: relative;
+      }
+      
+      .form-title::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-maroon));
+        border-radius: 2px;
+      }
+      
+      .form-subtitle {
+        color: #6c757d;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+      
+      .form-group {
+        margin-bottom: 25px;
+      }
+      
+      .form-group label {
+        color: #495057;
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+      }
+      
+      .form-control {
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        padding: 15px 20px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: #f8f9fa;
+      }
+      
+      .form-control:focus {
+        border-color: var(--primary-blue) !important;
+        box-shadow: 0 0 0 0.2rem rgba(44,172,238,0.25) !important;
+        background: var(--white);
+      }
+      
+      .btn-submit {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon));
+        border: none;
+        border-radius: 25px;
+        padding: 15px 40px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: var(--white);
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(44,172,238,0.3);
+      }
+      
+      .btn-submit:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(44,172,238,0.4);
+        background: linear-gradient(135deg, var(--primary-maroon), var(--black));
+      }
+      
+      /* Map Section Styling */
+      .map-section {
+        position: relative;
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon));
+        padding: 0;
+      }
+      
+      .map-container {
+        position: relative;
+        height: 100%;
+        min-height: 600px;
+      }
+      
+      .map-container iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 600px;
+        border-radius: 0;
+        position: relative;
+        z-index: 1;
+        border: none;
+      }
+      
+      .map-overlay {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        background: rgba(255,255,255,0.95);
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        z-index: 10;
+        max-width: 300px;
+        backdrop-filter: blur(10px);
+      }
+      
+      .map-overlay h4 {
+        color: var(--primary-blue);
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+      }
+      
+      .map-overlay p {
+        color: #495057;
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+      
+      .map-overlay i {
+        color: var(--primary-blue);
+        width: 20px;
+        margin-right: 8px;
+      }
+      
+      /* School Hours Section */
+      .school-hours {
+        background: var(--white);
+        padding: 60px 0;
+      }
+      
+      .hours-card {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon));
+        color: var(--white);
+        border-radius: 15px;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(44,172,238,0.3);
+        transition: all 0.3s ease;
+      }
+      
+      .hours-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(44,172,238,0.4);
+      }
+      
+      .hours-card h3 {
+        color: var(--white) !important;
+        font-weight: 700;
+        margin-bottom: 25px;
+        font-size: 1.8rem;
+      }
+      
+      .hours-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .hours-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        font-size: 1.1rem;
+      }
+      
+      .hours-list li:last-child {
+        border-bottom: none;
+      }
+      
+      .hours-list .day {
+        font-weight: 600;
+      }
+      
+      .hours-list .time {
+        font-weight: 400;
+        opacity: 0.9;
+      }
+      
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .form-section {
+          padding: 30px 20px;
+        }
+        
+        .form-title {
+          font-size: 1.8rem;
+        }
+        
+        .map-overlay {
+          position: relative;
+          top: auto;
+          left: auto;
+          margin: 20px;
+          max-width: none;
+        }
+        
+        .contact-info-card {
+          margin-bottom: 20px;
+        }
+        
+        .hours-card {
+          padding: 30px 20px;
+        }
+        
+        .map-container iframe {
+          min-height: 400px;
+        }
+      }
+      
+      /* Section Headings */
+      .section-heading {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      
+      .section-heading h2 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      
+      .section-heading h2 span {
+        color: var(--primary-blue);
+        position: relative;
+      }
+      
+      .section-heading h2 span::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-maroon));
+        border-radius: 2px;
+      }
+      
+      .section-heading p {
+        font-size: 1.2rem;
+        color: #6c757d;
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+	  <div class="py-2 bg-primary">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+	    		<div class="col-lg-12 d-block">
+		    		<div class="row d-flex">
+			    		<div class="col-md-5 pr-4 d-flex topper align-items-center">
+			    			<div class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
+						    <span class="text">MAJOHE, RELINI MJI MPYA, DAR ES SALAAM, TANZANIA</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">motherofmercyprimaryschool@gmail.com</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">0787886959 & 0784168758</span>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center">
+	    	<a class="navbar-brand" href="index.html"><img src="images/marry.jpeg" alt="Marry Mother Of Mercy Logo" style="height: 80px; width: auto;"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <!-- <p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p> -->
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item"><a href="index.html" class="nav-link pl-0">Home</a></li>
+	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	        	<li class="nav-item"><a href="teacher.html" class="nav-link">Teacher</a></li>
+	        	<li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
+	          <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <section class="hero-wrap hero-wrap-2 contact-hero" style="background-image: url('images/IMG_1100.JPG');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-2 bread">Get In Touch</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section contact-section">
+      <div class="container">
+        <div class="section-heading ftco-animate">
+          <h2><span>Contact</span> Information</h2>
+          <p>We're here to help and answer any questions you might have. We look forward to hearing from you!</p>
+        </div>
+        
+        <div class="row d-flex mb-5 contact-info">
+          <div class="col-lg-3 col-md-6 ftco-animate">
+            <div class="contact-info-card p-4 text-center">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3>Our Location</h3>
+              <p><strong>MAJOHE, RELINI MJI MPYA</strong><br>
+              DAR ES SALAAM, TANZANIA<br>
+              <small class="text-muted">P.O. BOX 12986</small></p>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 ftco-animate">
+            <div class="contact-info-card p-4 text-center">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <h3>Phone Numbers</h3>
+              <p>
+                <a href="tel:+255787886959">+255 787 886 959</a><br>
+                <a href="tel:+255784168758">+255 784 168 758</a><br>
+                <small class="text-muted">Call us anytime</small>
+              </p>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 ftco-animate">
+            <div class="contact-info-card p-4 text-center">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h3>Email Address</h3>
+              <p>
+                <a href="mailto:motherofmercyprimaryschool@gmail.com">motherofmercyprimaryschool@gmail.com</a><br>
+                <small class="text-muted">Send us an email</small>
+              </p>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 ftco-animate">
+            <div class="contact-info-card p-4 text-center">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h3>Office Hours</h3>
+              <p>
+                <strong>Monday - Friday</strong><br>
+                7:00 AM - 4:00 PM<br>
+                <small class="text-muted">Saturday: 8:00 AM - 12:00 PM</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+		<section class="contact-form-section">
+			<div class="container">
+				<div class="contact-form-container">
+					<div class="row no-gutters align-items-stretch">
+						<div class="col-md-6 order-md-last">
+							<div class="form-section">
+								<h2 class="form-title">Send us a Message</h2>
+								<p class="form-subtitle">Have questions about admissions, our curriculum, or want to schedule a visit? We'd love to hear from you!</p>
+								
+								<form action="#" method="POST" id="contactForm">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="firstName">First Name *</label>
+												<input type="text" class="form-control" id="firstName" name="firstName" required>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="lastName">Last Name *</label>
+												<input type="text" class="form-control" id="lastName" name="lastName" required>
+											</div>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="email">Email Address *</label>
+												<input type="email" class="form-control" id="email" name="email" required>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="phone">Phone Number</label>
+												<input type="tel" class="form-control" id="phone" name="phone">
+											</div>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="subject">Subject *</label>
+										<select class="form-control" id="subject" name="subject" required>
+											<option value="">Select a subject</option>
+											<option value="admission">Admission Inquiry</option>
+											<option value="curriculum">Curriculum Information</option>
+											<option value="visit">Schedule a Visit</option>
+											<option value="fees">Fee Structure</option>
+											<option value="transport">Transportation</option>
+											<option value="other">Other</option>
+										</select>
+									</div>
+									
+									<div class="form-group">
+										<label for="message">Message *</label>
+										<textarea class="form-control" id="message" name="message" rows="6" placeholder="Please tell us how we can help you..." required></textarea>
+									</div>
+									
+									<div class="form-group text-center">
+										<button type="submit" class="btn btn-submit">
+											<i class="fas fa-paper-plane mr-2"></i>Send Message
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						
+						<div class="col-md-6 map-section">
+							<div class="map-container">
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.3!2d39.15831!3d-6.901727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c37868ca18727%3A0x4c938603875a256d!2sMary%20Mother%20of%20Mercy%20Pre%20%26%20Primary%20School!5e0!3m2!1sen!2stz!4v1703123456789"
+									width="100%" 
+									height="100%" 
+									style="border:0; border-radius: 0;" 
+									allowfullscreen="" 
+									loading="lazy" 
+									referrerpolicy="no-referrer-when-downgrade">
+								</iframe>
+								<div class="map-overlay">
+									<h4><i class="fas fa-map-marker-alt mr-2"></i>Find Us Here</h4>
+									<p><i class="fas fa-home"></i>MAJOHE, RELINI MJI MPYA</p>
+									<p><i class="fas fa-city"></i>DAR ES SALAAM, TANZANIA</p>
+									<p><i class="fas fa-directions"></i>Near Mji Mpya Market</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- School Hours Section -->
+		<section class="school-hours">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-8 col-md-10">
+						<div class="hours-card ftco-animate">
+							<h3><i class="fas fa-clock mr-3"></i>School Hours & Availability</h3>
+							<ul class="hours-list">
+								<li>
+									<span class="day">Monday - Friday</span>
+									<span class="time">7:00 AM - 4:00 PM</span>
+								</li>
+								<li>
+									<span class="day">Saturday</span>
+									<span class="time">8:00 AM - 12:00 PM</span>
+								</li>
+								<li>
+									<span class="day">Sunday</span>
+									<span class="time">Closed</span>
+								</li>
+								<li>
+									<span class="day">Emergency Contact</span>
+									<span class="time">24/7 Available</span>
+								</li>
+							</ul>
+							<div class="mt-4">
+								<p class="mb-0"><i class="fas fa-info-circle mr-2"></i>Office visits are by appointment only. Please call ahead to schedule.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">MAJOHE, RELINI MJI MPYA, DAR ES SALAAM, TANZANIA</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">0787886959 & 0784168758</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">motherofmercyprimaryschool@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+              <h2 class="ftco-heading-2">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                <li><a href="about.html"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+                <li><a href="courses.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Courses</a></li>
+                <li><a href="teacher.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Teachers</a></li>
+                <li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Deparments</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Subscribe Us!</h2>
+              <form action="#" class="subscribe-form">
+                <div class="form-group">
+                  <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
+                  <input type="submit" value="Subscribe" class="form-control submit px-3">
+                </div>
+              </form>
+            </div>
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
+            	<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to JUP TECHNOLOGY can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Developed  <i class="icon-heart" aria-hidden="true"></i> by <a href="https://JUP TECHNOLOGY.com" target="_blank">JUP TECHNOLOGY</a>
+  <!-- Link back to JUP TECHNOLOGY can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Contact Form Enhancement Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Contact form submission handler
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Get form data
+          const formData = new FormData(this);
+          const submitBtn = this.querySelector('.btn-submit');
+          const originalText = submitBtn.innerHTML;
+          
+          // Show loading state
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+          submitBtn.disabled = true;
+          
+          // Simulate form submission (replace with actual form handling)
+          setTimeout(function() {
+            // Reset button
+            submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i>Message Sent!';
+            submitBtn.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Show success message
+            alert('Thank you for your message! We will get back to you soon.');
+            
+            // Reset button after 3 seconds
+            setTimeout(function() {
+              submitBtn.innerHTML = originalText;
+              submitBtn.disabled = false;
+              submitBtn.style.background = '';
+            }, 3000);
+          }, 2000);
+        });
+      }
+      
+      // Phone number formatting
+      const phoneInput = document.getElementById('phone');
+      if (phoneInput) {
+        phoneInput.addEventListener('input', function(e) {
+          let value = e.target.value.replace(/\D/g, '');
+          if (value.length > 0) {
+            if (value.startsWith('255')) {
+              value = '+' + value;
+            } else if (value.startsWith('0')) {
+              value = '+255' + value.substring(1);
+            } else if (!value.startsWith('+')) {
+              value = '+255' + value;
+            }
+          }
+          e.target.value = value;
+        });
+      }
+    });
+  </script>
+    
+  </body>
+</html>
