@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Form Debug</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #007bff;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #495057;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        .alert {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .alert-danger {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .alert-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .debug-section {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .test-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Live Form Debug Tool</h1>
+        <p>This tool will test all three processing scripts and show you exactly what's happening.</p>
+        
+        <form id="debugForm">
+            <div class="form-group">
+                <label for="class_to_join">Class to Join: *</label>
+                <select id="class_to_join" name="class_to_join" required>
+                    <option value="">Select Class</option>
+                    <option value="Standard I">Standard I</option>
+                    <option value="Standard II">Standard II</option>
+                    <option value="Pre-Primary I">Pre-Primary I</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="student_name">Student First Name: *</label>
+                <input type="text" id="student_name" name="student_name" required placeholder="Enter student's first name">
+            </div>
+            
+            <div class="form-group">
+                <label for="student_surname">Student Surname: *</label>
+                <input type="text" id="student_surname" name="student_surname" required placeholder="Enter student's surname">
+            </div>
+            
+            <div class="form-group">
+                <label for="father_name">Father's Name:</label>
+                <input type="text" id="father_name" name="father_name" placeholder="Enter father's name">
+            </div>
+            
+            <div class="test-buttons">
+                <button type="button" class="btn" onclick="testScript('process_application.php')">Test Original Script</button>
+                <button type="button" class="btn" onclick="testScript('process_application_fixed.php')">Test Fixed Script</button>
+                <button type="button" class="btn" onclick="testScript('process_application_simple.php')">Test Simple Script</button>
+            </div>
+        </form>
+        
+        <div id="result"></div>
+        
+        <div id="debugInfo" class="debug-section" style="display: none;">
+            <h4>🔍 Debug Information:</h4>
+            <div id="debugContent"></div>
+        </div>
+        
+        <div class="alert alert-info">
+            <h4>🎯 What Each Script Does:</h4>
+            <ul>
+                <li><strong>Original Script:</strong> Your current process_application.php</li>
+                <li><strong>Fixed Script:</strong> Enhanced version with better error handling</li>
+                <li><strong>Simple Script:</strong> Minimal version guaranteed to work</li>
+            </ul>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #e9ecef; border-radius: 5px;">
+            <h3>🔧 Quick Fixes</h3>
+            <p>If you're still getting "An error occurred":</p>
+            <ol>
+                <li><strong>Run the database fix:</strong> <a href="fix_application_error.php" target="_blank">fix_application_error.php</a></li>
+                <li><strong>Check XAMPP:</strong> Make sure Apache and MySQL are running</li>
+                <li><strong>Use simple script:</strong> Replace your process_application.php with the simple version</li>
+                <li><strong>Check browser console:</strong> Press F12 and look for JavaScript errors</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function testScript(scriptName) {
+            const form = document.getElementById('debugForm');
+            const resultDiv = document.getElementById('result');
+            const debugInfo = document.getElementById('debugInfo');
+            const debugContent = document.getElementById('debugContent');
+            
+            // Validate required fields
+            const classToJoin = document.getElementById('class_to_join').value;
+            const studentName = document.getElementById('student_name').value;
+            const studentSurname = document.getElementById('student_surname').value;
+            
+            if (!classToJoin || !studentName || !studentSurname) {
+                resultDiv.innerHTML = '<div class="alert alert-danger">❌ Please fill in all required fields</div>';
+                return;
+            }
+            
+            // Show loading state
+            resultDiv.innerHTML = '<div class="alert alert-info">🔄 Testing ' + scriptName + '...</div>';
+            debugInfo.style.display = 'block';
+            debugContent.innerHTML = '<h5>Testing: ' + scriptName + '</h5>';
+            
+            // Get form data
+            const formData = new FormData(form);
+            
+            // Add timestamp for debugging
+            const startTime = new Date().getTime();
+            
+            fetch(scriptName, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                const endTime = new Date().getTime();
+                const responseTime = endTime - startTime;
+                
+                debugContent.innerHTML += `Response Time: ${responseTime}ms<br>`;
+                debugContent.innerHTML += `Status: ${response.status} ${response.statusText}<br>`;
+                debugContent.innerHTML += `Content-Type: ${response.headers.get('content-type')}<br>`;
+                
+                return response.text();
+            })
+            .then(text => {
+                debugContent.innerHTML += `Raw Response Length: ${text.length} characters<br>`;
+                debugContent.innerHTML += `Raw Response: <pre style="background: #fff; padding: 10px; border-radius: 3px; max-height: 200px; overflow-y: auto;">${text.substring(0, 1000)}${text.length > 1000 ? '...' : ''}</pre>`;
+                
+                try {
+                    const data = JSON.parse(text);
+                    debugContent.innerHTML += `Parsed JSON: <pre style="background: #fff; padding: 10px; border-radius: 3px;">${JSON.stringify(data, null, 2)}</pre>`;
+                    
+                    if (data.success) {
+                        resultDiv.innerHTML = `
+                            <div class="alert alert-success">
+                                <h4>✅ Success with ${scriptName}!</h4>
+                                <p><strong>Message:</strong> ${data.message}</p>
+                                <p><strong>Application No:</strong> ${data.application_no || 'Not provided'}</p>
+                                <p><strong>Student:</strong> ${data.student_name || 'Not provided'}</p>
+                                <p><strong>Class:</strong> ${data.class || 'Not provided'}</p>
+                                <p><strong>Timestamp:</strong> ${data.timestamp || 'Not provided'}</p>
+                            </div>
+                        `;
+                        
+                        if (scriptName !== 'process_application.php') {
+                            resultDiv.innerHTML += `
+                                <div class="alert alert-info">
+                                    <h4>💡 Solution Found!</h4>
+                                    <p>The ${scriptName} works correctly. You should replace your current process_application.php with this version.</p>
+                                    <p><strong>To fix:</strong> Rename ${scriptName} to process_application.php</p>
+                                </div>
+                            `;
+                        }
+                    } else {
+                        resultDiv.innerHTML = `
+                            <div class="alert alert-danger">
+                                <h4>❌ Error with ${scriptName}</h4>
+                                <p><strong>Message:</strong> ${data.message}</p>
+                                <p><strong>Error Code:</strong> ${data.error_code || 'Not provided'}</p>
+                                <p><strong>Timestamp:</strong> ${data.timestamp || 'Not provided'}</p>
+                            </div>
+                        `;
+                    }
+                } catch (parseError) {
+                    debugContent.innerHTML += `JSON Parse Error: ${parseError.message}<br>`;
+                    
+                    resultDiv.innerHTML = `
+                        <div class="alert alert-danger">
+                            <h4>❌ Invalid JSON Response from ${scriptName}</h4>
+                            <p><strong>Parse Error:</strong> ${parseError.message}</p>
+                            <p><strong>This is likely causing the "An error occurred" message.</strong></p>
+                            <p>The server is returning HTML or malformed JSON instead of valid JSON.</p>
+                        </div>
+                    `;
+                    
+                    // Check if response looks like HTML
+                    if (text.trim().startsWith('<')) {
+                        resultDiv.innerHTML += `
+                            <div class="alert alert-info">
+                                <h4>🔍 Diagnosis: HTML Response Detected</h4>
+                                <p>The script is returning HTML (probably an error page) instead of JSON.</p>
+                                <p><strong>Common causes:</strong></p>
+                                <ul>
+                                    <li>PHP syntax errors in the script</li>
+                                    <li>Database connection failures</li>
+                                    <li>Missing database or table</li>
+                                    <li>Server configuration issues</li>
+                                </ul>
+                            </div>
+                        `;
+                    }
+                }
+            })
+            .catch(error => {
+                debugContent.innerHTML += `Fetch Error: ${error.message}<br>`;
+                
+                resultDiv.innerHTML = `
+                    <div class="alert alert-danger">
+                        <h4>❌ Network Error with ${scriptName}</h4>
+                        <p><strong>Error:</strong> ${error.message}</p>
+                        <p><strong>Possible causes:</strong></p>
+                        <ul>
+                            <li>Script file doesn't exist</li>
+                            <li>Server is not running</li>
+                            <li>Network connectivity issues</li>
+                            <li>CORS or security restrictions</li>
+                        </ul>
+                    </div>
+                `;
+            });
+        }
+        
+        // Auto-fill form for quick testing
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('class_to_join').value = 'Standard I';
+            document.getElementById('student_name').value = 'Test';
+            document.getElementById('student_surname').value = 'Student';
+            document.getElementById('father_name').value = 'Test Father';
+        });
+    </script>
+</body>
+</html>
