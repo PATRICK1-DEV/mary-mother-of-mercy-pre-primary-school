@@ -224,6 +224,9 @@
         height: 280px;
         transition: all 0.4s ease;
         position: relative;
+        background-size: cover !important;
+        background-position: center top !important;
+        background-repeat: no-repeat !important;
       }
       
       .staff:hover .img {
@@ -397,7 +400,8 @@
         }
         
         .staff .img {
-          height: 250px;
+          height: 280px;
+          background-position: center top !important;
         }
         
         .staff .text {
@@ -427,11 +431,23 @@
         }
       }
       
-      /* Loading Animation for Images */
-      .staff .img {
-        background-size: cover !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
+      /* Additional mobile optimizations for very small screens */
+      @media (max-width: 480px) {
+        .staff .img {
+          height: 300px;
+          background-position: center 20% !important;
+        }
+        
+        .staff {
+          margin-bottom: 25px;
+        }
+      }
+      
+      /* Tablet optimization */
+      @media (min-width: 481px) and (max-width: 768px) {
+        .staff .img {
+          background-position: center 15% !important;
+        }
       }
       
       /* Hover Effects for Better UX */
@@ -553,26 +569,7 @@
 					<p>Our dedicated team of qualified educators brings passion, expertise, and commitment to nurturing young minds. Each teacher is carefully selected for their educational qualifications, teaching experience, and dedication to student success.</p>
 				</div>
 				<div class="row">
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/ass%20manager.jpg);"></div>
-							</div>
-							<div class="text pt-3 text-center">
-								<h3>Assistant Manager</h3>
-								<span class="position mb-2">ASSISTANT MANAGER</span>
-								<div class="faded">
-									<p>Dedicated to supporting educational excellence and administrative efficiency at Mary Mother of Mercy.</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#"><i class="fab fa-twitter"></i></a></li>
-		                <li class="ftco-animate"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-		                <li class="ftco-animate"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-		                <li class="ftco-animate"><a href="#"><i class="fab fa-instagram"></i></a></li>
-		              </ul>
-	              </div>
-							</div>
-						</div>
-					</div>
+
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
