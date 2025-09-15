@@ -1,0 +1,53 @@
+===============================================
+   MARY MOTHER OF MERCY SCHOOL - ADMIN ACCESS
+===============================================
+
+🔐 ADMIN LOGIN CREDENTIALS:
+---------------------------
+URL: http://localhost/marry_mother_of_mercy/admin/login.php
+Username: admin
+Password: mercy2024
+
+⚡ QUICK START:
+--------------
+1. Start XAMPP (Apache + MySQL)
+2. Open: http://localhost/marry_mother_of_mercy/admin/login.php
+3. Login with: admin / mercy2024
+4. Access dashboard and manage school website
+
+📋 MAIN ADMIN FEATURES:
+----------------------
+• Dashboard - Overview & statistics
+• Applications - Manage student applications
+• Contact Info - Update school details
+
+🔧 FIRST TIME SETUP:
+--------------------
+If admin doesn't work, run database setup:
+http://localhost/marry_mother_of_mercy/admin/complete_setup.php
+
+🚨 TROUBLESHOOTING:
+------------------
+• XAMPP not running → Start Apache & MySQL
+• Login fails → Check username: admin, password: mercy2024
+• Database error → Run complete_setup.php
+• Page not loading → Clear browser cache
+
+📞 IMPORTANT URLS:
+-----------------
+Admin Login: /admin/login.php
+Dashboard: /admin/dashboard.php
+Applications: /admin/applications.php
+Database Setup: /admin/complete_setup.php
+phpMyAdmin: http://localhost/phpmyadmin
+
+🔒 SECURITY:
+-----------
+• Always logout when finished
+• Change default password in config.php
+• Regular backups recommended
+• Monitor application submissions
+
+===============================================
+Keep this reference handy for quick access!
+===============================================

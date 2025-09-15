@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>School Events - Marry Mother Of Mercy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- FontAwesome for modern icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom Color Scheme CSS -->
+    <style>
+      /* Color Variables */
+      :root {
+        --primary-blue: rgb(44, 172, 238);
+        --primary-maroon: maroon;
+        --white: white;
+        --black: black;
+        --light-blue: rgba(44, 172, 238, 0.1);
+        --light-maroon: rgba(128, 0, 0, 0.1);
+      }
+      
+      /* Main Color Scheme Updates */
+      .bg-primary {
+        background-color: var(--primary-blue) !important;
+      }
+      
+      .bg-secondary {
+        background-color: var(--primary-maroon) !important;
+      }
+      
+      .bg-tertiary {
+        background-color: var(--primary-blue) !important;
+      }
+      
+      .bg-fifth {
+        background-color: var(--primary-maroon) !important;
+      }
+      
+      .text-primary {
+        color: var(--primary-blue) !important;
+      }
+      
+      .btn-primary {
+        background: var(--primary-blue) !important;
+        border-color: var(--primary-blue) !important;
+        color: var(--white) !important;
+      }
+      
+      .btn-primary:hover {
+        background: var(--primary-maroon) !important;
+        border-color: var(--primary-maroon) !important;
+        color: var(--white) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(128,0,0,0.4);
+      }
+      
+      /* Navigation Colors */
+      .navbar-dark,
+      .bg-dark,
+      #ftco-navbar {
+        background-color: var(--white) !important;
+        background: var(--white) !important;
+        border-bottom: 1px solid #e9ecef;
+      }
+      
+      .navbar-nav .nav-link {
+        color: var(--black) !important;
+      }
+      
+      .navbar-nav .nav-link:hover {
+        color: var(--primary-blue) !important;
+      }
+      
+      .navbar-nav .nav-item.active .nav-link {
+        color: var(--primary-blue) !important;
+        font-weight: bold;
+      }
+      
+      /* Override any Bootstrap default colors */
+      .navbar-dark .navbar-nav .nav-link {
+        color: var(--black) !important;
+      }
+      
+      .navbar-dark .navbar-nav .nav-link:hover,
+      .navbar-dark .navbar-nav .nav-link:focus {
+        color: var(--primary-blue) !important;
+      }
+      
+      .navbar-dark .navbar-nav .active > .nav-link,
+      .navbar-dark .navbar-nav .nav-link.active {
+        color: var(--primary-blue) !important;
+        font-weight: bold;
+      }
+      
+      /* Links */
+      a {
+        color: var(--primary-blue);
+      }
+      
+      a:hover {
+        color: var(--primary-maroon);
+      }
+      
+      /* Hero Section */
+      .hero-wrap .overlay {
+        background: linear-gradient(45deg, rgba(0,0,0,0.5), rgba(128,0,0,0.3)) !important;
+      }
+      
+      .breadcrumbs a {
+        color: var(--primary-blue) !important;
+      }
+      
+      /* Footer Styling */
+      .ftco-footer {
+        background-color: var(--black) !important;
+      }
+      
+      .ftco-footer h2 {
+        color: var(--white) !important;
+      }
+      
+      .ftco-footer .text {
+        color: rgba(255,255,255,0.8) !important;
+      }
+      
+      .ftco-footer a {
+        color: rgba(255,255,255,0.8) !important;
+      }
+      
+      .ftco-footer a:hover {
+        color: var(--primary-blue) !important;
+      }
+      
+      /* Enhanced Events Page Styling */
+      .events-hero {
+        background: linear-gradient(135deg, rgba(44,172,238,0.9), rgba(128,0,0,0.8)), url('images/IMG_1098.webp');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      
+      /* Event Cards */
+      .event-card {
+        background: var(--white);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: all 0.4s ease;
+        overflow: hidden;
+        border: 2px solid transparent;
+        margin-bottom: 30px;
+        position: relative;
+        height: 100%;
+      }
+      
+      .event-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-maroon));
+        z-index: 1;
+      }
+      
+      .event-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(44,172,238,0.2);
+        border-color: var(--primary-blue);
+      }
+      
+      .event-image {
+        position: relative;
+        overflow: hidden;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      
+      .event-image::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, transparent, rgba(44,172,238,0.1));
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+      
+      .event-card:hover .event-image::after {
+        opacity: 1;
+      }
+      
+      .event-date {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon));
+        color: var(--white);
+        padding: 8px 12px;
+        border-radius: 15px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        z-index: 2;
+        box-shadow: 0 4px 15px rgba(44,172,238,0.3);
+      }
+      
+      .event-category {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: rgba(255,255,255,0.9);
+        color: var(--primary-blue);
+        padding: 5px 10px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        z-index: 2;
+      }
+      
+      .event-content {
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 250px);
+      }
+      
+      .event-title {
+        color: #2c3e50;
+        font-weight: 700;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        line-height: 1.3;
+      }
+      
+      .event-description {
+        color: #6c757d;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        flex-grow: 1;
+      }
+      
+      .event-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: auto;
+      }
+      
+      .btn-event {
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .btn-view {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-maroon));
+        color: var(--white);
+        flex: 1;
+      }
+      
+      .btn-view:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(44,172,238,0.4);
+        color: var(--white);
+        text-decoration: none;
+      }
+      
+      .btn-youtube {
+        background: #ff0000;
+        color: var(--white);
+        padding: 10px 15px;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .btn-youtube:hover {
+        background: #cc0000;
+        transform: scale(1.1);
+        color: var(--white);
+        text-decoration: none;
+      }
+      
+      /* Filter Buttons */
+      .filter-container {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      
+      .filter-btn {
+        background: var(--white);
+        border: 2px solid var(--primary-blue);
+        color: var(--primary-blue);
+        padding: 10px 25px;
+        margin: 5px;
+        border-radius: 25px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: var(--primary-blue);
+        color: var(--white);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(44,172,238,0.3);
+      }
+      
+      /* Section Header */
+      .events-section-header {
+        text-align: center;
+        margin-bottom: 60px;
+        padding: 60px 0 0 0;
+      }
+      
+      .events-section-header h2 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      
+      .events-section-header h2 span {
+        color: var(--primary-blue);
+        position: relative;
+      }
+      
+      .events-section-header h2 span::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-maroon));
+        border-radius: 2px;
+      }
+      
+      .events-section-header p {
+        font-size: 1.2rem;
+        color: #6c757d;
+        line-height: 1.6;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      
+      /* Event Modal */
+      .event-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        backdrop-filter: blur(5px);
+      }
+      
+      .modal-content {
+        background-color: var(--white);
+        margin: 5% auto;
+        padding: 0;
+        border-radius: 20px;
+        width: 90%;
+        max-width: 800px;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+      }
+      
+      .modal-header {
+        position: relative;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px 20px 0 0;
+      }
+      
+      .modal-close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        color: var(--white);
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        background: rgba(0,0,0,0.5);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+      
+      .modal-close:hover {
+        background: rgba(0,0,0,0.8);
+        transform: scale(1.1);
+      }
+      
+      .modal-body {
+        padding: 30px;
+      }
+      
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .events-section-header h2 {
+          font-size: 2.2rem;
+        }
+        
+        .event-card {
+          margin-bottom: 20px;
+        }
+        
+        .event-content {
+          padding: 20px;
+        }
+        
+        .event-title {
+          font-size: 1.2rem;
+        }
+        
+        .filter-btn {
+          padding: 8px 20px;
+          font-size: 0.9rem;
+        }
+        
+        .modal-content {
+          width: 95%;
+          margin: 10% auto;
+        }
+        
+        .modal-header {
+          height: 200px;
+        }
+        
+        .modal-body {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+	  <div class="py-2 bg-primary">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+	    		<div class="col-lg-12 d-block">
+		    		<div class="row d-flex">
+			    		<div class="col-md-5 pr-4 d-flex topper align-items-center">
+			    			<div class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
+						    <span class="text">MAJOHE, RELINI MJI MPYA, DAR ES SALAAM, TANZANIA</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">motherofmercyprimaryschool@gmail.com</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">0787886959 & 0784168758</span>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center">
+	    	<a class="navbar-brand" href="index.html"><img src="images/marry.webp" alt="Marry Mother Of Mercy Logo" style="height: 80px; width: auto;"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item"><a href="index.html" class="nav-link pl-0">Home</a></li>
+	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	        	<li class="nav-item"><a href="teacher.html" class="nav-link">Teacher</a></li>
+	        	<li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
+	        	<li class="nav-item active"><a href="events.html" class="nav-link">School Events</a></li>
+	        	<li class="nav-item"><a href="results.html" class="nav-link">Results</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <section class="hero-wrap hero-wrap-2 events-hero" style="background-image: url('images/IMG_1098.webp');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-2 bread">School Events</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>School Events <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="events-section-header ftco-animate">
+          <h2><span>School</span> Events</h2>
+          <p>Discover the vibrant life at Marry Mother Of Mercy through our exciting school events, activities, and celebrations that bring our community together.</p>
+        </div>
+        
+        <!-- Event Filters -->
+        <div class="filter-container ftco-animate">
+          <button class="filter-btn active" data-filter="all">All Events</button>
+          <button class="filter-btn" data-filter="academic">Academic</button>
+          <button class="filter-btn" data-filter="sports">Sports</button>
+          <button class="filter-btn" data-filter="cultural">Cultural</button>
+          <button class="filter-btn" data-filter="celebration">Celebrations</button>
+          <button class="filter-btn" data-filter="community">Community</button>
+        </div>
+        
+        <!-- Events Grid -->
+        <div class="row" id="events-container">
+          
+          <!-- Event 1: Sports Day -->
+          <div class="col-lg-4 col-md-6 ftco-animate event-item" data-category="sports">
+            <div class="event-card">
+              <div class="event-image" style="background-image: url('images/IMG_0849.webp');">
+                <div class="event-category">Sports</div>
+                <div class="event-date">March 15, 2024</div>
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">Annual Sports Day</h3>
+                <p class="event-description">Our exciting annual sports day featuring track and field events, team sports, and fun activities for all students. A day of healthy competition and school spirit!</p>
+                <div class="event-actions">
+                  <a href="#" class="btn-event btn-view" onclick="openEventModal('sports-day')">View Details</a>
+                  <a href="https://youtube.com/@marrymotherofmercy" target="_blank" class="btn-event btn-youtube" title="Watch on YouTube">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Event 2: Science Fair -->
+          <div class="col-lg-4 col-md-6 ftco-animate event-item" data-category="academic">
+            <div class="event-card">
+              <div class="event-image" style="background-image: url('images/IMG_0928.webp');">
+                <div class="event-category">Academic</div>
+                <div class="event-date">April 22, 2024</div>
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">Science Fair 2024</h3>
+                <p class="event-description">Students showcase their innovative science projects and experiments. A celebration of curiosity, discovery, and scientific thinking among our young scientists.</p>
+                <div class="event-actions">
+                  <a href="#" class="btn-event btn-view" onclick="openEventModal('science-fair')">View Details</a>
+                  <a href="https://youtube.com/@marrymotherofmercy" target="_blank" class="btn-event btn-youtube" title="Watch on YouTube">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Event 3: Cultural Day -->
+          <div class="col-lg-4 col-md-6 ftco-animate event-item" data-category="cultural">
+            <div class="event-card">
+              <div class="event-image" style="background-image: url('images/IMG_0938.webp');">
+                <div class="event-category">Cultural</div>
+                <div class="event-date">May 10, 2024</div>
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">Cultural Diversity Day</h3>
+                <p class="event-description">Celebrating the rich cultural heritage of Tanzania with traditional dances, music, food, and costumes. Students learn about different cultures and traditions.</p>
+                <div class="event-actions">
+                  <a href="#" class="btn-event btn-view" onclick="openEventModal('cultural-day')">View Details</a>
+                  <a href="https://youtube.com/@marrymotherofmercy" target="_blank" class="btn-event btn-youtube" title="Watch on YouTube">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Event 4: Graduation Ceremony -->
+          <div class="col-lg-4 col-md-6 ftco-animate event-item" data-category="celebration">
+            <div class="event-card">
+              <div class="event-image" style="background-image: url('images/IMG_0950.webp');">
+                <div class="event-category">Celebration</div>
+                <div class="event-date">July 20, 2024</div>
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">Graduation Ceremony</h3>
+                <p class="event-description">A proud moment as our students graduate and move to the next level of their education. Celebrating achievements and new beginnings with families and friends.</p>
+                <div class="event-actions">
+                  <a href="#" class="btn-event btn-view" onclick="openEventModal('graduation')">View Details</a>
+                  <a href="https://youtube.com/@marrymotherofmercy" target="_blank" class="btn-event btn-youtube" title="Watch on YouTube">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Event 5: Art Exhibition -->
+          <div class="col-lg-4 col-md-6 ftco-animate event-item" data-category="cultural">
+            <div class="event-card">
+              <div class="event-image" style="background-image: url('images/IMG_0954.webp');">
+                <div class="event-category">Cultural</div>
+                <div class="event-date">June 5, 2024</div>
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">Student Art Exhibition</h3>
+                <p class="event-description">Showcasing the creative talents of our students through paintings, drawings, crafts, and sculptures. A colorful display of imagination and artistic skills.</p>
+                <div class="event-actions">
+                  <a href="#" class="btn-event btn-view" onclick="openEventModal('art-exhibition')">View Details</a>
+                  <a href="https://youtube.com/@marrymotherofmercy" target="_blank" class="btn-event btn-youtube" title="Watch on YouTube">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Event 6: Community Service -->
+          <div class="col-lg-4 col-md-6 ftco-animate event-item" data-category="community">
+            <div class="event-card">
+              <div class="event-image" style="background-image: url('images/IMG_1088.webp');">
+                <div class="event-category">Community</div>
+                <div class="event-date">August 12, 2024</div>
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">Community Service Day</h3>
+                <p class="event-description">Students participate in community service activities, learning the importance of giving back and helping others in our local community.</p>
+                <div class="event-actions">
+                  <a href="#" class="btn-event btn-view" onclick="openEventModal('community-service')">View Details</a>
+                  <a href="https://youtube.com/@marrymotherofmercy" target="_blank" class="btn-event btn-youtube" title="Watch on YouTube">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Modal -->
+    <div id="eventModal" class="event-modal">
+      <div class="modal-content">
+        <div class="modal-header" id="modalHeader">
+          <span class="modal-close" onclick="closeEventModal()">&times;</span>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- Modal content will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">MAJOHE, RELINI MJI MPYA, DAR ES SALAAM, TANZANIA</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">0787886959 & 0784168758</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">motherofmercyprimaryschool@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+              <h2 class="ftco-heading-2">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                <li><a href="about.html"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+                <li><a href="courses.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Courses</a></li>
+                <li><a href="teacher.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Teachers</a></li>
+                <li><a href="events.html"><span class="ion-ios-arrow-round-forward mr-2"></span>School Events</a></li>
+                <li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Deparments</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Subscribe Us!</h2>
+              <form action="#" class="subscribe-form">
+                <div class="form-group">
+                  <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
+                  <input type="submit" value="Subscribe" class="form-control submit px-3">
+                </div>
+              </form>
+            </div>
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
+            	<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Developed <i class="icon-heart" aria-hidden="true"></i> by <a href="https://JUP TECHNOLOGY.com" target="_blank">JUP TECHNOLOGY</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+    
+    <!-- Immediate loader hide script -->
+    <script>
+      // Hide loader immediately - multiple approaches
+      document.addEventListener('DOMContentLoaded', function() {
+        var loader = document.getElementById('ftco-loader');
+        if (loader) {
+          loader.classList.remove('show');
+          loader.style.display = 'none';
+        }
+      });
+      
+      // Backup approach
+      setTimeout(function() {
+        var loader = document.getElementById('ftco-loader');
+        if (loader) {
+          loader.classList.remove('show');
+          loader.style.display = 'none';
+        }
+      }, 100);
+      
+      // Emergency approach
+      setTimeout(function() {
+        var loader = document.getElementById('ftco-loader');
+        if (loader) {
+          loader.style.display = 'none';
+        }
+      }, 500);
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Events Page JavaScript -->
+    <script>
+      // Event data for modals
+      const eventData = {
+        'sports-day': {
+          title: 'Annual Sports Day 2024',
+          image: 'images/IMG_0849.webp',
+          date: 'March 15, 2024',
+          category: 'Sports',
+          description: 'Our exciting annual sports day featuring track and field events, team sports, and fun activities for all students. A day of healthy competition and school spirit!',
+          fullDescription: `
+            <h4>Event Highlights:</h4>
+            <ul>
+              <li>Track and field competitions for all age groups</li>
+              <li>Team sports including football, netball, and volleyball</li>
+              <li>Fun races and relay events</li>
+              <li>Awards ceremony for outstanding performances</li>
+              <li>Refreshments and entertainment for families</li>
+            </ul>
+            <p><strong>Time:</strong> 8:00 AM - 4:00 PM</p>
+            <p><strong>Venue:</strong> School Sports Ground</p>
+            <p><strong>Participants:</strong> All students from Pre-Primary to Standard 7</p>
+          `,
+          youtubeUrl: 'https://youtube.com/@marrymotherofmercy'
+        },
+        'science-fair': {
+          title: 'Science Fair 2024',
+          image: 'images/IMG_0928.webp',
+          date: 'April 22, 2024',
+          category: 'Academic',
+          description: 'Students showcase their innovative science projects and experiments. A celebration of curiosity, discovery, and scientific thinking among our young scientists.',
+          fullDescription: `
+            <h4>Featured Projects:</h4>
+            <ul>
+              <li>Environmental science experiments</li>
+              <li>Physics demonstrations and models</li>
+              <li>Chemistry experiments and reactions</li>
+              <li>Biology projects and life science displays</li>
+              <li>Technology and innovation showcases</li>
+            </ul>
+            <p><strong>Time:</strong> 9:00 AM - 3:00 PM</p>
+            <p><strong>Venue:</strong> School Hall and Classrooms</p>
+            <p><strong>Judges:</strong> Local scientists and educators</p>
+          `,
+          youtubeUrl: 'https://youtube.com/@marrymotherofmercy'
+        },
+        'cultural-day': {
+          title: 'Cultural Diversity Day',
+          image: 'images/IMG_0938.webp',
+          date: 'May 10, 2024',
+          category: 'Cultural',
+          description: 'Celebrating the rich cultural heritage of Tanzania with traditional dances, music, food, and costumes. Students learn about different cultures and traditions.',
+          fullDescription: `
+            <h4>Cultural Activities:</h4>
+            <ul>
+              <li>Traditional Tanzanian dances and music performances</li>
+              <li>Cultural costume parade</li>
+              <li>Traditional food tasting</li>
+              <li>Storytelling sessions with elders</li>
+              <li>Arts and crafts workshops</li>
+              <li>Cultural games and activities</li>
+            </ul>
+            <p><strong>Time:</strong> 10:00 AM - 4:00 PM</p>
+            <p><strong>Venue:</strong> School Compound</p>
+            <p><strong>Special Guests:</strong> Community elders and cultural leaders</p>
+          `,
+          youtubeUrl: 'https://youtube.com/@marrymotherofmercy'
+        },
+        'graduation': {
+          title: 'Graduation Ceremony 2024',
+          image: 'images/IMG_0950.webp',
+          date: 'July 20, 2024',
+          category: 'Celebration',
+          description: 'A proud moment as our students graduate and move to the next level of their education. Celebrating achievements and new beginnings with families and friends.',
+          fullDescription: `
+            <h4>Ceremony Program:</h4>
+            <ul>
+              <li>Welcome address by the Head Teacher</li>
+              <li>Academic awards and recognition</li>
+              <li>Student performances and speeches</li>
+              <li>Certificate presentation</li>
+              <li>Guest speaker presentation</li>
+              <li>Photography session with families</li>
+            </ul>
+            <p><strong>Time:</strong> 2:00 PM - 5:00 PM</p>
+            <p><strong>Venue:</strong> School Hall</p>
+            <p><strong>Dress Code:</strong> Formal attire</p>
+          `,
+          youtubeUrl: 'https://youtube.com/@marrymotherofmercy'
+        },
+        'art-exhibition': {
+          title: 'Student Art Exhibition',
+          image: 'images/IMG_0954.webp',
+          date: 'June 5, 2024',
+          category: 'Cultural',
+          description: 'Showcasing the creative talents of our students through paintings, drawings, crafts, and sculptures. A colorful display of imagination and artistic skills.',
+          fullDescription: `
+            <h4>Art Categories:</h4>
+            <ul>
+              <li>Paintings and drawings</li>
+              <li>Sculptures and 3D art</li>
+              <li>Crafts and handmade items</li>
+              <li>Digital art and photography</li>
+              <li>Collaborative class projects</li>
+              <li>Recycled material art</li>
+            </ul>
+            <p><strong>Time:</strong> 9:00 AM - 4:00 PM</p>
+            <p><strong>Venue:</strong> School Art Gallery and Corridors</p>
+            <p><strong>Awards:</strong> Best in category and overall excellence</p>
+          `,
+          youtubeUrl: 'https://youtube.com/@marrymotherofmercy'
+        },
+        'community-service': {
+          title: 'Community Service Day',
+          image: 'images/IMG_1088.webp',
+          date: 'August 12, 2024',
+          category: 'Community',
+          description: 'Students participate in community service activities, learning the importance of giving back and helping others in our local community.',
+          fullDescription: `
+            <h4>Service Activities:</h4>
+            <ul>
+              <li>Environmental cleanup in the neighborhood</li>
+              <li>Visiting elderly community members</li>
+              <li>Helping at local health centers</li>
+              <li>Tree planting initiatives</li>
+              <li>Reading to younger children</li>
+              <li>Community garden maintenance</li>
+            </ul>
+            <p><strong>Time:</strong> 8:00 AM - 2:00 PM</p>
+            <p><strong>Meeting Point:</strong> School Main Gate</p>
+            <p><strong>Requirements:</strong> Comfortable clothes and water bottle</p>
+          `,
+          youtubeUrl: 'https://youtube.com/@marrymotherofmercy'
+        }
+      };
+
+      // Filter functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const eventItems = document.querySelectorAll('.event-item');
+
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            const filter = this.getAttribute('data-filter');
+
+            eventItems.forEach(item => {
+              if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                item.style.display = 'block';
+                setTimeout(() => {
+                  item.style.opacity = '1';
+                  item.style.transform = 'translateY(0)';
+                }, 10);
+              } else {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                  item.style.display = 'none';
+                }, 300);
+              }
+            });
+          });
+        });
+      });
+
+      // Modal functionality
+      function openEventModal(eventId) {
+        const modal = document.getElementById('eventModal');
+        const modalHeader = document.getElementById('modalHeader');
+        const modalBody = document.getElementById('modalBody');
+        const event = eventData[eventId];
+
+        if (event) {
+          modalHeader.style.backgroundImage = `url('${event.image}')`;
+          modalBody.innerHTML = `
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div>
+                <h2 style="color: var(--primary-blue); margin-bottom: 10px;">${event.title}</h2>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary mr-2" style="background: var(--primary-blue);">${event.category}</span>
+                  <span style="color: #6c757d;"><i class="fas fa-calendar mr-1"></i>${event.date}</span>
+                </div>
+              </div>
+              <a href="${event.youtubeUrl}" target="_blank" class="btn btn-danger">
+                <i class="fab fa-youtube mr-1"></i> Watch on YouTube
+              </a>
+            </div>
+            <p style="font-size: 1.1rem; color: #495057; margin-bottom: 20px;">${event.description}</p>
+            <div style="color: #6c757d; line-height: 1.6;">
+              ${event.fullDescription}
+            </div>
+          `;
+          modal.style.display = 'block';
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      function closeEventModal() {
+        const modal = document.getElementById('eventModal');
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+
+      // Close modal when clicking outside
+      window.onclick = function(event) {
+        const modal = document.getElementById('eventModal');
+        if (event.target == modal) {
+          closeEventModal();
+        }
+      }
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeEventModal();
+        }
+      });
+    </script>
+    
+  </body>
+</html>
