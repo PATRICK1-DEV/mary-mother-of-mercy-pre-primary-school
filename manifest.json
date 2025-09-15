@@ -1,0 +1,21 @@
+{
+  "name": "Mary Mother of Mercy Pre & Primary School",
+  "short_name": "Mary Mother School",
+  "description": "Quality Catholic education for children in Dar es Salaam, Tanzania",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2cacee",
+  "icons": [
+    {
+      "src": "images/marry.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "images/marry.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
